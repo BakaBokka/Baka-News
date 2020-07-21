@@ -6,17 +6,19 @@
     <meta name="author" content="Damir Vakhitov" />
     <meta name="description" content="Diploma project for YaP" />
     <title>Baka News</title>
+
     <link rel="icon" href="./images/favicon.svg" sizes="any" type="image/svg" />
-    <link rel="stylesheet" href="./index.css" />
+    <!-- <link rel="stylesheet" type="text/css" href="./pages/index.css" /> -->
   </head>
-  <body>
+  <body class="page">
     <header>
       <nav class="header__nav">
-        <img
-          src="./images/NewsAnalyzer-logo.svg"
+        <a href="#" class="header__logo-link"><img
+          src="<%=require('./images/NewsAnalyzer-logo.svg')%>"
           alt="Логотип"
           class="header__logo"
         />
+      </a>
         <ul class="header__nav-links">
           <li class="header__nav-item">
             <a href="#" class="header__nav-link">Главная</a>
@@ -26,6 +28,5 @@
       </nav>
     </header>
     <h1>Что в мире творится?</h1>
-    
   </body>
 </html>
