@@ -1,0 +1,20 @@
+.header__nav-link_active_ligth {
+  color: #FFF;
+  /* border-bottom: 1px solid #FFFFFF; */
+  position: relative;
+
+}
+
+
+.header__nav-link_active_ligth:before {
+  display: block;
+  position: absolute;
+  content: "";
+  height: 3px;
+  width: 68px;
+  background: #fff;
+
+  left: 0;
+  top: 48px;
+}
+

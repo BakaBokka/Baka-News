@@ -1,0 +1,13 @@
+@import url(./__content/author__content.css);
+@import url(./__photo/author__photo.css);
+@import url(./__about/author__about.css);
+@import url(./__title/author__title.css);
+@import url(./__text/author__text.css);
+@import url(./__paragraph/author__paragraph.css);
+
+
+
+.author {
+  display: flex;
+  justify-content: space-between;
+}

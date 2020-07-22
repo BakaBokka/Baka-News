@@ -1,0 +1,7 @@
+.author__photo {
+  border-radius: 100%;
+  margin-right: 56px;
+  max-width: 464px;
+  max-height: 464px;
+  flex-shrink: 1;
+}

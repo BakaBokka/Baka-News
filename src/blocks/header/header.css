@@ -2,10 +2,36 @@
 @import url(./__nav-links/header__nav-links.css);
 @import url(./__nav-item/header__nav-item.css);
 @import url(./__nav-link/header__nav-link.css);
+@import url(./__nav-links/_active/header__nav-link_active_ligth.css);
 
 .header {
   display: flex;
-  max-width: 1440px;
+  justify-content: space-between;
+  max-width: 100%;
+  width: 100%;
   background: rgba(196, 196, 196, 0.01);
   box-shadow: inset 0px -1px 0px rgba(255, 255, 255, 0.2);
+  min-height: 80px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin: 0 auto;
+
+}
+
+
+
+@media (max-width: 768px) {
+  .header {
+    min-height: 64px;
+  }
+
+}
+
+
+@media (max-width: 320px) {
+  .header {
+    min-height: 56px;
+  }
+
 }

@@ -1,0 +1,18 @@
+.search__form-submit {
+  background: #2f71e5;
+  box-shadow: 0px 5px 15px rgba(14, 26, 57, 0.2);
+  border-radius: 100px;
+  position: absolute;
+  left: 441px;
+  width: 168px;
+  min-height: 64px;
+  border: none;
+
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 24px;
+
+  color: #fff;
+}

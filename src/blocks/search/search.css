@@ -1,0 +1,17 @@
+@import url(./__content/search__content.css);
+@import url(./__title/search__title.css);
+@import url(./__text/search__text.css);
+@import url(./__form/search__form.css);
+@import url(./__from-input/search__from-input.css);
+@import url(./__form-submit/search__form-submit.css);
+
+.search {
+  background-image: url(../../images/search-background.png);
+  background-size: cover;
+  background-position: center;
+
+  min-height: 576px;
+  display: flex;
+  flex-direction: column;
+
+}

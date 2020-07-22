@@ -1,0 +1,11 @@
+.section-container {
+  max-width: 85.76%;
+  width: 100%;
+}
+
+@media (max-width: 769px) {
+  .section-container {
+    max-width: 89.58%;
+    width: 100%;
+  }
+}

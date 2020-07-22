@@ -11,22 +11,75 @@
     <!-- <link rel="stylesheet" type="text/css" href="./pages/index.css" /> -->
   </head>
   <body class="page">
-    <header>
-      <nav class="header__nav">
-        <a href="#" class="header__logo-link"><img
-          src="<%=require('./images/NewsAnalyzer-logo.svg')%>"
-          alt="Логотип"
-          class="header__logo"
-        />
-      </a>
+    <header class="header">
+      <nav class="header__nav section-container">
+        <a href="#" class="header__logo-link"
+          ><img
+            src="<%=require('./images/NewsAnalyzer-logo.svg')%>"
+            alt="Логотип"
+            class="header__logo"
+          />
+        </a>
         <ul class="header__nav-links">
           <li class="header__nav-item">
-            <a href="#" class="header__nav-link">Главная</a>
+            <a href="#" class="header__nav-link header__nav-link_active_ligth"
+              >Главная</a
+            >
+          </li>
+          <li class="header__nav-item">
             <a href="#" class="header__nav-link">О проекте</a>
           </li>
         </ul>
       </nav>
     </header>
-    <h1>Что в мире творится?</h1>
+
+    <section class="search">
+      <div class="search__content">
+        <h1 class="search__title">Что в мире творится?</h1>
+        <p class="search__text paragraph">
+          Введите в поиске любую тему и узнайте, насколько популярной она была в
+          новостях за прошедшую неделю.
+        </p>
+        <form class="search__form">
+          <input
+            type="search"
+            placeholder="Введите тему новости"
+            id="search"
+            class="search__from-input"
+          />
+          <input
+            type="submit"
+            value="Искать"
+            id="submit"
+            class="search__form-submit"
+          />
+        </form>
+      </div>
+    </section>
+
+    <section class="author">
+      <div class="author__content section-container">
+        <img
+          src="<%=require('./images/avatar.jpg')%>"
+          alt="Красивая фотокарточка с лицом автора"
+          class="author__photo"
+        />
+
+        <div class="author__about">
+          <h2 class="author__title section-title">Об авторе</h2>
+          <div class="author__text">
+            <p class="author__paragraph paragraph">
+              Это блок с описанием автора проекта. Здесь следует указать, как
+              вас зовут, чем вы занимаетесь, какими технологиями разработки
+              владеете.
+            </p>
+            <p class="author__paragraph paragraph">
+              Также можно рассказать о процессе обучения в Практикуме, чему вы
+              тут научились, и чем можете помочь потенциальным заказчикам.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
   </body>
 </html>
