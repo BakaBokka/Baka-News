@@ -75,8 +75,9 @@
             class="result__not-found-image"
           />
           <p class="result__not-found-accent">Ничего не найдено</p>
-          <p class="result__not-found-message">К сожалению по вашему запросу
-            ничего не найдено.</p>
+          <p class="result__not-found-message">
+            К сожалению по вашему запросу ничего не найдено.
+          </p>
         </div>
       </div>
     </section>
@@ -118,5 +119,45 @@
         </div>
       </div>
     </section>
+
+    <footer class="footer">
+      <div class="footer__content section-container">
+      <a href="#" class="footer__copyright">&#169; 2020 BakaBokka</a>
+      <nav class="footer__nav">
+        <ul class="footer__nav-links">
+          <li class="footer__nav-item">
+            <a href="#" class="footer__nav-link">Главная</a>
+          </li>
+          <li class="footer__nav-item">
+            <a href="#" class="footer__nav-link">О проекте</a>
+          </li>
+          <li class="footer__nav-item">
+            <a href="#" class="footer__nav-link">Яндекс.Практикум</a>
+          </li>
+        </ul>
+      </nav>
+
+      <ul class="footer__socials">
+        <li class="footer__social">
+          <a href="#" class="footer__social-link">
+            <img
+              src="<%=require('./images/github.jpg')%>"
+              alt="Иконка Гитхаб"
+              class="footer__social-icon"
+            />
+          </a>
+        </li>
+        <li class="footer__social">
+          <a href="#" class="footer__social-link">
+            <img
+              src="<%=require('./images/fb.jpg')%>"
+              alt="Иконка Фейсбук"
+              class="footer__social-icon"
+            />
+          </a>
+        </li>
+      </ul>
+    </div>
+    </footer>
   </body>
 </html>

@@ -1,0 +1,23 @@
+.footer__socials {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+@media (max-width: 700px) {
+  .footer__socials{
+   order: 2;
+   margin-bottom: 40px;
+   margin-right: 16px;
+
+  }
+}
+
+@media (max-width: 500px) {
+  .footer__socials{
+
+   margin-right: 0;
+
+  }
+}
