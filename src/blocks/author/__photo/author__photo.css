@@ -5,3 +5,16 @@
   max-height: 464px;
   flex-shrink: 1;
 }
+
+@media (max-width: 768px) {
+  .author__photo {
+    margin-right: 32px;
+  }
+}
+
+
+@media (max-width: 420px) {
+  .author__photo {
+    margin: 0 0 24px;
+  }
+}

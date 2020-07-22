@@ -10,7 +10,7 @@
   background-size: cover;
   background-position: center;
 
-  min-height: 576px;
+  /* min-height: 576px; */
   display: flex;
   flex-direction: column;
 

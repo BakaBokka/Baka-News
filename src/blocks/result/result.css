@@ -1,0 +1,18 @@
+@import url(./__content/result__content.css);
+@import url(./__preloader/result__preloader.css);
+@import url(./__preloader-circle/result__preloader-circle.css);
+@import url(./__preloader-message/result__preloader-message.css);
+@import url(./__not-found/result__not-found.css);
+@import url(./__not-found-image/result__not-found-image.css);
+@import url(./__not-found-accent/result__not-found-accent.css);
+@import url(./__not-found-message/result__not-found-message.css);
+
+.result {
+  background: #f5f6f7;
+  display: flex;
+  flex-direction: column;
+
+
+  text-align: center;
+  margin: 0 auto;
+}

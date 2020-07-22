@@ -7,3 +7,10 @@
 
   color: #1a1b22;
 }
+
+@media (max-width: 769px) {
+  .section-title {
+    font-size: 30px;
+    line-height: 40px;
+  }
+}

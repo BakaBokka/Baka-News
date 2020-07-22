@@ -6,13 +6,44 @@
   left: 441px;
   width: 168px;
   min-height: 64px;
-  border: none;
-
+  border-width: 0;
   font-family: Roboto;
   font-style: normal;
   font-weight: 500;
   font-size: 18px;
   line-height: 24px;
-
+  outline: none;
   color: #fff;
+  cursor: pointer;
+  transition-duration: .5s;
+}
+
+.search__form-submit:hover {
+  background: #347eff;
+
+}
+
+.search__form-submit:active {
+  background: #2A65CC;
+}
+
+
+
+
+@media (max-width: 769px) {
+  .search__form-submit {
+    width: 160px;
+    min-height: 56px;
+    position: absolute;
+    left: 303px;
+  }
+}
+
+@media (max-width: 500px) {
+  .search__form-submit {
+    max-width: 100%;
+    width: 100%;
+    min-height: 56px;
+    position: initial;
+  }
 }

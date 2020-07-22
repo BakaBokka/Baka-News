@@ -3,3 +3,9 @@
   /* max-width:545px; */
   margin: 0 0 64px;
 }
+
+@media (max-width: 420px) {
+  .search__text {
+    margin: 0 0 64px;
+  }
+}

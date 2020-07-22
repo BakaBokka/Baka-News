@@ -12,7 +12,7 @@
   </head>
   <body class="page">
     <header class="header">
-      <nav class="header__nav section-container">
+      <div class="header__content section-container">
         <a href="#" class="header__logo-link"
           ><img
             src="<%=require('./images/NewsAnalyzer-logo.svg')%>"
@@ -20,23 +20,25 @@
             class="header__logo"
           />
         </a>
-        <ul class="header__nav-links">
-          <li class="header__nav-item">
-            <a href="#" class="header__nav-link header__nav-link_active_ligth"
-              >Главная</a
-            >
-          </li>
-          <li class="header__nav-item">
-            <a href="#" class="header__nav-link">О проекте</a>
-          </li>
-        </ul>
-      </nav>
+        <nav class="header__nav">
+          <ul class="header__nav-links">
+            <li class="header__nav-item">
+              <a href="#" class="header__nav-link header__nav-link_active_ligth"
+                >Главная</a
+              >
+            </li>
+            <li class="header__nav-item">
+              <a href="#" class="header__nav-link">О проекте</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
     </header>
 
     <section class="search">
       <div class="search__content">
         <h1 class="search__title">Что в мире творится?</h1>
-        <p class="search__text paragraph">
+        <p class="search__text">
           Введите в поиске любую тему и узнайте, насколько популярной она была в
           новостях за прошедшую неделю.
         </p>
@@ -56,24 +58,59 @@
         </form>
       </div>
     </section>
+    <section class="result">
+      <div class="result__content">
+        <!-- Прелоадер -->
+        <div class="result__preloader">
+          <div class="result__preloader-circle"></div>
+          <p class="result__preloader-message">
+            Идет поиск новостей...
+          </p>
+        </div>
+
+        <div class="result__not-found">
+          <img
+            src="<%=require('./images/not-found_v1.png')%>"
+            alt="Иконка 'Не найдено'"
+            class="result__not-found-image"
+          />
+          <p class="result__not-found-accent">Ничего не найдено</p>
+          <p class="result__not-found-message">К сожалению по вашему запросу
+            ничего не найдено.</p>
+        </div>
+      </div>
+    </section>
 
     <section class="author">
       <div class="author__content section-container">
-        <img
-          src="<%=require('./images/avatar.jpg')%>"
-          alt="Красивая фотокарточка с лицом автора"
-          class="author__photo"
-        />
+        <picture class="author__photo">
+          <source
+            media="(max-width: 420px)"
+            srcset="<%=require('./images/avatar272.jpg')%>"
+          />
+          <source
+            media="(max-width: 769px)"
+            srcset="<%=require('./images/avatar232.jpg')%>"
+          />
+          <source
+            media="(max-width: 1021px)"
+            srcset="<%=require('./images/avatar350.jpg')%>"
+          />
+          <img
+            src="<%=require('./images/avatar.jpg')%>"
+            alt="Красивая фотокарточка с лицом автора"
+          />
+        </picture>
 
         <div class="author__about">
           <h2 class="author__title section-title">Об авторе</h2>
           <div class="author__text">
-            <p class="author__paragraph paragraph">
+            <p class="author__paragraph">
               Это блок с описанием автора проекта. Здесь следует указать, как
               вас зовут, чем вы занимаетесь, какими технологиями разработки
               владеете.
             </p>
-            <p class="author__paragraph paragraph">
+            <p class="author__paragraph">
               Также можно рассказать о процессе обучения в Практикуме, чему вы
               тут научились, и чем можете помочь потенциальным заказчикам.
             </p>
