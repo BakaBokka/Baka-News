@@ -1,0 +1,27 @@
+.section-link {
+  font-family: Roboto, Arial, Helvetica, sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 24px;
+  display: flex;
+  padding-top: 10px;
+  color: #1a1b22;
+  text-decoration: none;
+  transition-duration: 1s;
+}
+
+.section-link:after {
+  content: "";
+
+  background-image: url("../../images/arrow.png");
+  background-repeat: no-repeat;
+  width: 24px;
+  height: 24px;
+  margin: 5px 0 0 8px;
+}
+
+.section-link:hover {
+  transform: translateX(10px);
+  opacity: .4;
+}

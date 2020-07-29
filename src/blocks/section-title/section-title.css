@@ -14,3 +14,19 @@
     line-height: 40px;
   }
 }
+
+@media (max-width: 600px) {
+  .section-title {
+    font-size: 30px;
+    line-height: 34px;
+    margin-bottom: 16px;
+  }
+}
+
+
+@media (max-width: 340px) {
+  .section-title {
+    max-width: 290px;
+    text-align: left;
+  }
+}

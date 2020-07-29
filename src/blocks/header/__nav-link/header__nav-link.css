@@ -1,4 +1,10 @@
 .header__nav-link {
 text-decoration: none;
 color: #B6BCBF;
+transition-duration: 1s;
+}
+
+.header__nav-link:hover {
+  color: #fff;
+ transform: scale(1.1)
 }

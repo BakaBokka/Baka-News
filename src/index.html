@@ -7,10 +7,12 @@
     <meta name="description" content="Diploma project for YaP" />
     <title>Baka News</title>
 
-    <link rel="icon" href="./images/favicon.svg" sizes="any" type="image/svg" />
+    <link rel="icon" href="<%=require('./images/favicon.svg')%>" sizes="any" type="image/svg+xml" />
     <!-- <link rel="stylesheet" type="text/css" href="./pages/index.css" /> -->
   </head>
   <body class="page">
+
+
     <header class="header">
       <div class="header__content section-container">
         <a href="#" class="header__logo-link"
@@ -23,7 +25,7 @@
         <nav class="header__nav">
           <ul class="header__nav-links">
             <li class="header__nav-item">
-              <a href="#" class="header__nav-link header__nav-link_active_ligth"
+              <a href="#" class="header__nav-link header__nav-link_active_light"
                 >Главная</a
               >
             </li>
@@ -34,6 +36,7 @@
         </nav>
       </div>
     </header>
+
 
     <section class="search">
       <div class="search__content">
@@ -49,17 +52,23 @@
             id="search"
             class="search__from-input"
           />
-          <input
-            type="submit"
-            value="Искать"
+
+          <!-- Поставить тип - сабмит в кнопке -->
+          <button
+            type="button"
+
             id="submit"
             class="search__form-submit"
-          />
+          > Искать
+          </button>
         </form>
       </div>
     </section>
+
+
+
     <section class="result">
-      <div class="result__content">
+      <div class="result__content section-container">
         <!-- Прелоадер -->
         <div class="result__preloader">
           <div class="result__preloader-circle"></div>
@@ -79,11 +88,180 @@
             К сожалению по вашему запросу ничего не найдено.
           </p>
         </div>
+        <div class="result__cards ">
+          <div class="result__cards-header">
+            <h2 class="result__cards-title section-title">Результаты поиска</h2>
+            <a href="" class="section-link">Посмотреть аналитику </a>
+          </div>
+
+          <!-- Контейнер для карточек -->
+          <div class="result__cards-container ">
+
+            <div class="result-card">
+              <img
+                class="result-card__image"
+                src="<%=require('./images/card-background/image_1.jpg')%>"
+
+              ></img>
+              <div class="result-card__desc">
+                <a href="#" class="result-card__link" target="__blank">
+                <p class="result-card__date">2 августа, 2019</p>
+
+                <h3 class="result-card__title">
+                  Национальное достояние – парки
+                </h3>
+                <a href="#" class="result-card__link" target="__blank">
+                  <p class="result-card__text">
+                    В 2016 году Америка отмечала важный юбилей: сто лет назад
+                    здесь начала складываться система национальных парков –
+                    охраняемых территорий, где и сегодня каждый может
+                    приобщиться к природе.
+                  </p>
+                </a>
+                  <p class="result-card__origin">Лента.ру</p>
+
+              </div>
+            </div>
+
+
+            <div class="result-card">
+              <img
+                class="result-card__image"
+                src="<%=require('./images/card-background/image_2.jpg')%>"
+
+              ></img>
+              <div class="result-card__desc">
+                <a href="#" class="result-card__link" target="__blank">
+                <p class="result-card__date">2 августа, 2019</p>
+
+                <h3 class="result-card__title">
+                  Лесные огоньки: история одной фотографии
+                </h3>
+
+
+                  <p class="result-card__text">
+                    Фотограф отвлеклась от освещения суровой политической реальности Мексики,
+                    чтобы запечатлеть ускользающую красоту одного
+                    из местных чудес природы.
+
+                  </p>
+                </a>
+                  <p class="result-card__origin">Медуза</p>
+
+              </div>
+            </div>
+
+
+            <div class="result-card">
+              <img
+                class="result-card__image"
+                src="<%=require('./images/card-background/image_3.jpg')%>"
+
+              ></img>
+              <div class="result-card__desc">
+                <a href="#" class="result-card__link" target="__blank">
+                <p class="result-card__date">2 августа, 2019</p>
+
+                <h3 class="result-card__title">
+                  «Первозданная тайга»: новый фотопроект Игоря Шпиленка
+                </h3>
+
+
+                  <p class="result-card__text">
+                    Знаменитый фотограф снимает первозданные леса России,
+                    чтобы рассказать о необходимости их сохранения. В этот раз он отправился в Двинско-Пинежскую тайгу, где...
+                  </p>
+                  </a>
+                  <p class="result-card__origin">Риа</p>
+
+              </div>
+            </div>
+
+            <div class="result-card">
+              <img
+                class="result-card__image"
+                src="<%=require('./images/card-background/image_4.jpg')%>"
+
+              ></img>
+              <div class="result-card__desc">
+                <a href="#" class="result-card__link" target="__blank">
+                <p class="result-card__date">2 августа, 2019</p>
+
+                <h3 class="result-card__title">
+                  Национальное достояние – парки
+                </h3>
+
+
+                  <p class="result-card__text">
+                    В 2016 году Америка отмечала важный юбилей: сто лет назад здесь начала складываться система национальных парков – охраняемых территорий, где и сегодня каждый может приобщиться к природе.
+                  </p>
+                  </a>
+                  <p class="result-card__origin">Дзен</p>
+
+              </div>
+            </div>
+
+            <div class="result-card">
+              <img
+                class="result-card__image"
+                src="<%=require('./images/card-background/image_5.jpg')%>"
+
+              ></img>
+              <div class="result-card__desc">
+                <a href="#" class="result-card__link" target="__blank">
+                <p class="result-card__date">2 августа, 2019</p>
+
+                <h3 class="result-card__title">
+                  Лесные огоньки: история одной фотографии
+                </h3>
+
+
+                  <p class="result-card__text">
+                    Фотограф отвлеклась от освещения суровой политической реальности Мексики, чтобы запечатлеть ускользающую красоту одного
+из местных чудес природы.
+
+                  </p>
+                </a>
+                  <p class="result-card__origin">Афиша</p>
+
+              </div>
+            </div>
+
+            <div class="result-card">
+              <img
+                class="result-card__image"
+                src="<%=require('./images/card-background/image_6.jpg')%>"
+
+              ></img>
+              <div class="result-card__desc">
+                <a href="#" class="result-card__link" target="__blank">
+                <p class="result-card__date">2 августа, 2019</p>
+
+                <h3 class="result-card__title">
+                  «Первозданная тайга»: новый фотопроект Игоря Шпиленка
+                </h3>
+
+
+                  <p class="result-card__text">
+                    Знаменитый фотограф снимает первозданные леса России, чтобы рассказать о необходимости их сохранения. В этот раз он отправился в Двинско-Пинежскую тайгу, где...
+                  </p>
+                  </a>
+                  <p class="result-card__origin">Медиазона</p>
+
+              </div>
+            </div>
+
+          </div>
+          <!-- Конец контейнера для карточек -->
+
+          <button class="result__cards-button">Показать еще</button>
+        </div>
       </div>
     </section>
 
     <section class="author">
       <div class="author__content section-container">
+ <!-- <div class="author__photo-wrap"> -->
         <picture class="author__photo">
           <source
             media="(max-width: 420px)"
@@ -102,6 +280,8 @@
             alt="Красивая фотокарточка с лицом автора"
           />
         </picture>
+      <!-- </div> -->
+
 
         <div class="author__about">
           <h2 class="author__title section-title">Об авторе</h2>
@@ -122,42 +302,75 @@
 
     <footer class="footer">
       <div class="footer__content section-container">
-      <a href="#" class="footer__copyright">&#169; 2020 BakaBokka</a>
-      <nav class="footer__nav">
-        <ul class="footer__nav-links">
-          <li class="footer__nav-item">
-            <a href="#" class="footer__nav-link">Главная</a>
+        <a href="https://github.com/BakaBokka" class="footer__copyright"
+          >&#169; 2020 BakaBokka</a
+        >
+        <nav class="footer__nav">
+          <ul class="footer__nav-links">
+            <li class="footer__nav-item">
+              <a href="#" class="footer__nav-link">Главная</a>
+            </li>
+            <li class="footer__nav-item">
+              <a href="#" class="footer__nav-link">О проекте</a>
+            </li>
+            <li class="footer__nav-item">
+              <a href="https://praktikum.yandex.ru/" class="footer__nav-link"
+                >Яндекс.Практикум</a
+              >
+            </li>
+          </ul>
+        </nav>
+
+        <ul class="footer__socials">
+          <li class="footer__social">
+            <a href="https://github.com/BakaBokka" class="footer__social-link">
+              <img
+                src="<%=require('./images/github.jpg')%>"
+                alt="Иконка Гитхаб"
+                class="footer__social-icon"
+              />
+            </a>
           </li>
-          <li class="footer__nav-item">
-            <a href="#" class="footer__nav-link">О проекте</a>
-          </li>
-          <li class="footer__nav-item">
-            <a href="#" class="footer__nav-link">Яндекс.Практикум</a>
+          <li class="footer__social">
+            <a href="https://www.facebook.com/" class="footer__social-link">
+              <img
+                src="<%=require('./images/fb.jpg')%>"
+                alt="Иконка Фейсбук"
+                class="footer__social-icon"
+              />
+            </a>
           </li>
         </ul>
-      </nav>
-
-      <ul class="footer__socials">
-        <li class="footer__social">
-          <a href="#" class="footer__social-link">
-            <img
-              src="<%=require('./images/github.jpg')%>"
-              alt="Иконка Гитхаб"
-              class="footer__social-icon"
-            />
-          </a>
-        </li>
-        <li class="footer__social">
-          <a href="#" class="footer__social-link">
-            <img
-              src="<%=require('./images/fb.jpg')%>"
-              alt="Иконка Фейсбук"
-              class="footer__social-icon"
-            />
-          </a>
-        </li>
-      </ul>
-    </div>
+      </div>
     </footer>
+
+    <!-- Пример карточки с результатом поиска -->
+    <template id="template-card">
+
+      <div class="result-card">
+        <img
+          class="result-card__image"
+          src=""
+
+        ></img>
+        <div class="result-card__desc">
+          <a href="#" class="result-card__link" target="__blank">
+          <p class="result-card__date"></p>
+
+          <h3 class="result-card__title">
+
+          </h3>
+
+
+            <p class="result-card__text">
+
+            </p>
+            </a>
+            <p class="result-card__origin"></p>
+
+        </div>
+      </div>
+    </template>
+    <!-- конец примера -->
   </body>
 </html>

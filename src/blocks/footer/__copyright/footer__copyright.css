@@ -3,10 +3,15 @@
 
   text-decoration: none;
   color: #b6bcbf;
+  transition-duration: 1s;
 }
 
 @media (max-width: 700px) {
   .footer__copyright {
     order: 3;
   }
+}
+
+.footer__copyright:hover {
+  color: #1a1b22;;
 }

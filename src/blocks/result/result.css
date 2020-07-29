@@ -6,6 +6,11 @@
 @import url(./__not-found-image/result__not-found-image.css);
 @import url(./__not-found-accent/result__not-found-accent.css);
 @import url(./__not-found-message/result__not-found-message.css);
+@import url(./__cards/result__cards.css);
+@import url(./__cards-header/result__cards-header.css);
+@import url(./__cards-container/result__cards-container.css);
+@import url(./__cards-title/result__cards-title.css);
+@import url(./__cards-button/result__cards-button.css);
 
 .result {
   background: #f5f6f7;

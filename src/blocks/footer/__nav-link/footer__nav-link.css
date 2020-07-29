@@ -1,4 +1,9 @@
-.footer__nav-link{
+.footer__nav-link {
   text-decoration: none;
   color: #1a1b22;
+  transition-duration: 1s;
+}
+
+.footer__nav-link:hover {
+  color: #b6bcbf;
 }

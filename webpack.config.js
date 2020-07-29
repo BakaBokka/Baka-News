@@ -49,7 +49,7 @@ module: {
       use: 'file-loader?name=./fonts/[name].[ext]'
     },
     {
-      test: /\.(jpg|jpeg|png|svg|webp)$/,
+      test: /\.(jpg|jpeg|png|svg|webp|ico)$/,
       use: 'file-loader?name=./images/[name].[ext]&esModule=false'
     }
   ],

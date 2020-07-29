@@ -1,0 +1,27 @@
+.header__nav-link_active_light {
+  color: #fff;
+  transition-duration: 1s;
+  position: relative;
+}
+
+.header__nav-link_active_light:before {
+  display: block;
+  position: absolute;
+  content: "";
+  height: 3px;
+  width: 68px;
+  background: #fff;
+
+  left: 0;
+  top: 48px;
+  transition-duration: 1s;
+}
+
+.header__nav-link_active_light:hover:before {
+  color: #b6bcbf;
+  background: #b6bcbf;
+}
+
+.header__nav-link_active_light:hover {
+  color: #b6bcbf;
+}

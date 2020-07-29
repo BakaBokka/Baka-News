@@ -1,0 +1,22 @@
+.result-card__desc {
+  display: flex;
+  flex-direction: column;
+
+  justify-content: space-between;
+  box-sizing: border-box;
+  text-align: left;
+  padding: 20px 24px 24px;
+  height: 100%;
+
+
+
+
+}
+
+
+@media (max-width: 769px) {
+  .result-card__desc {
+    padding: 16px;
+  }
+}
+
