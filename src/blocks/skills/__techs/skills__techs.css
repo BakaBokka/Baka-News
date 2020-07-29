@@ -1,0 +1,18 @@
+.skills__techs {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 120px);
+  gap: 40px;
+}
+
+@media (max-width: 890px) {
+  .skills__techs {
+    gap: 60px;
+  }
+}
+
+
+@media (max-width: 370px) {
+  .skills__techs {
+    gap: 33px;
+  }
+}

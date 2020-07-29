@@ -1,0 +1,12 @@
+.skills__content {
+  margin: 80px auto 90px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+@media (max-width: 890px) {
+  .skills__content {
+    grid-template-columns: none;
+    gap: 40px;
+  }
+}

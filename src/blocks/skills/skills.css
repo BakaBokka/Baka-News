@@ -1,0 +1,12 @@
+@import url('./__content/skills__content.css');
+@import url('./__techs/skills__techs.css');
+@import url('./__tech/skills__tech.css');
+@import url('./__tech-caption/skills__tech-caption.css');
+@import url('./__title/skills__title.css');
+@import url('./__tech-image/skills__tech-image.css');
+
+.skills {
+  background: #F5F6F7;
+  display: flex;
+  
+}

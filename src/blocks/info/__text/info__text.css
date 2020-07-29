@@ -1,0 +1,14 @@
+.info__text {
+  margin: 0 0 20px;
+  max-width: 815px;
+}
+
+.info__text:last-of-type {
+  margin: 0;
+}
+
+@media (min-width: 1441px) {
+  .info__text {
+    max-width: 100%;
+  }
+}

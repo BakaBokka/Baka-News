@@ -6,6 +6,8 @@
 @import url(./__logo/header__logo.css);
 @import url(./__nav-link/_active/header__nav-link_active_light.css);
 @import url(./__nav-link/_active/header__nav-link_active_dark.css);
+@import url(./_theme/header_theme_light.css);
+@import url(./__nav-link/_theme/header__nav-link_theme_light.css);
 
 .header {
   display: flex;

@@ -1,0 +1,10 @@
+.info__title {
+  margin: 0 0 24px;
+
+}
+
+@media (max-width: 769px) {
+  .info__title {
+    margin: 0 0 16px;
+  }
+}

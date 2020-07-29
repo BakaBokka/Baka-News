@@ -17,6 +17,18 @@
   transition-duration: 1s;
 }
 
+@media (max-width: 768px) {
+  .header__nav-link_active_light:before {
+    top: 40px;
+  }
+}
+
+@media (max-width: 320px) {
+  .header__nav-link_active_light:before {
+    top: 35px;
+  }
+}
+
 .header__nav-link_active_light:hover:before {
   color: #b6bcbf;
   background: #b6bcbf;
