@@ -4,7 +4,7 @@
   font-weight: 500;
   font-size: 18px;
   line-height: 24px;
-  display: flex;
+
   padding-top: 10px;
   color: #1a1b22;
   text-decoration: none;
@@ -23,5 +23,5 @@
 
 .section-link:hover {
   transform: translateX(10px);
-  opacity: .4;
+  opacity: 0.4;
 }

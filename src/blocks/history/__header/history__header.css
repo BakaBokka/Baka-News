@@ -1,0 +1,22 @@
+.history__header {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 64px;
+}
+
+@media (max-width: 769px) {
+  .history__header {
+    margin-bottom: 32px;
+  }
+
+}
+
+@media (max-width: 440px) {
+  .history__header {
+    margin-bottom: 12px;
+  }
+
+}

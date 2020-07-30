@@ -6,6 +6,7 @@
 @import url(./__text/result-card__text.css);
 @import url(./__origin/result-card__origin.css);
 
+
 .result-card {
   display: flex;
   flex-direction: column;

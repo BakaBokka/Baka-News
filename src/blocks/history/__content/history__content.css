@@ -1,0 +1,6 @@
+.history__content {
+  margin: 80px auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}

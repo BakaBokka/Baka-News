@@ -11,6 +11,7 @@
 @import url(./__cards-container/result__cards-container.css);
 @import url(./__cards-title/result__cards-title.css);
 @import url(./__cards-button/result__cards-button.css);
+@import url(./__cards-link/result__cards-link.css);
 
 .result {
   background: #f5f6f7;

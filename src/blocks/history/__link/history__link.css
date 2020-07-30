@@ -1,0 +1,9 @@
+.history__link {
+  display: flex;
+}
+
+@media (max-width: 440px) {
+  .history__link {
+    display: none;
+  }
+}
