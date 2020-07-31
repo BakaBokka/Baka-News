@@ -1,0 +1,17 @@
+.swiper-slide__photo {
+  border-radius: 100%;
+  width: 64px;
+  height: 64px;
+  margin-right: 16px;
+}
+
+@media (max-width: 440px) {
+.swiper-slide__photo {
+  width: 48px;
+  height: 48px;
+  margin-right: 12px;
+
+}
+
+
+}

@@ -1,0 +1,44 @@
+@import url(./__content/swiper-slide__content.css);
+@import url(./__date/swiper-slide__date.css);
+@import url(./__author/swiper-slide__author.css);
+@import url(./__photo/swiper-slide__photo.css);
+@import url(./__info/swiper-slide__info.css);
+@import url(./__name/swiper-slide__name.css);
+@import url(./__email/swiper-slide__email.css);
+@import url(./__text/swiper-slide__text.css);
+
+.swiper-slide {
+  background: #fff;
+  border-radius: 16px;
+  display: flex;
+  flex-direction: column;
+  max-width: 400px;
+  max-height: 288px;
+  min-width: 400px;
+  min-height: 288px;
+
+
+
+}
+
+@media (max-width: 769px) {
+  .swiper-slide {
+    max-width: 336px;
+    max-height: 242px;
+    min-width: 336px;
+  min-height: 242px;
+  }
+}
+
+@media (max-width: 440px) {
+  .swiper-slide {
+    max-width: 288px;
+    max-height: 264px;
+    min-width: 288px;
+  min-height: 264px;
+  }
+}
+
+.swiper-slide:hover {
+  cursor: pointer;
+}

@@ -2,9 +2,9 @@
   display: none;
 }
 
-
 @media (max-width: 440px) {
   .history__button {
     display: flex;
+    margin: 0 auto 32px;
   }
 }

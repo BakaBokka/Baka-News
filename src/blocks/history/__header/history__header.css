@@ -4,19 +4,17 @@
   flex-wrap: wrap;
   align-items: center;
   width: 100%;
-  margin-bottom: 64px;
+  margin: 80px auto 64px;
 }
 
 @media (max-width: 769px) {
   .history__header {
-    margin-bottom: 32px;
+    margin: 40px auto 32px;
   }
-
 }
 
 @media (max-width: 440px) {
   .history__header {
-    margin-bottom: 12px;
+    margin: 32px auto 12px;
   }
-
 }

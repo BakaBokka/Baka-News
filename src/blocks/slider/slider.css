@@ -1,3 +1,21 @@
+@import url(./__wrapper/slider__wrapper.css);
+@import url(./__pagination/slider__pagination.css);
+@import url(./__button/slider__button.css);
+@import url(./__overlay-wrap/slider__overlay-wrap.css);
+@import url(./__overlay/slider__overlay.css);
 .slider {
-  
+  width: 100%;
+  height: 100%;
+  margin-bottom: 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
+
+@media (max-width: 440px) {
+  .slider {
+    margin-bottom: 32px;
+  }
+}
+
+

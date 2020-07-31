@@ -39,6 +39,7 @@ module.exports = {
 
       {
         test: /\.css$/,
+        sideEffects: true,
         use: [
           isDev ? "style-loader" : MiniCssExtractPlugin.loader,
           {

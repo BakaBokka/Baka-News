@@ -1,4 +1,4 @@
-@import url(./__content/history__content.css);
+
 @import url(./__header/history__header.css);
 @import url(./__title/history__title.css);
 @import url(./__button/history__button.css);
@@ -6,7 +6,7 @@
 
 .history {
 display: flex;
-
+flex-direction: column;
 background: #F5F6F7;
 
 }
