@@ -1,4 +1,5 @@
-.section-title {
+.analytic-data__title {
+  margin: 0 0 24px;
   font-family: Roboto Slab;
   font-style: normal;
   font-weight: normal;
@@ -9,22 +10,23 @@
 }
 
 @media (max-width: 769px) {
-  .section-title {
-    font-size: 30px;
+  .analytic-data__title {
+    font-size: 32px;
+
     line-height: 40px;
   }
 }
 
 @media (max-width: 600px) {
-  .section-title {
+  .analytic-data__title {
     line-height: 34px;
-    margin-bottom: 16px;
   }
 }
 
 @media (max-width: 340px) {
-  .section-title {
-    max-width: 200px;
+  .analytic-data__title {
+    font-size: 30px;
+    margin: 16px 0 24px;
     text-align: left;
   }
 }
