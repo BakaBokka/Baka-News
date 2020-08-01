@@ -1,7 +1,7 @@
 @import url(./__title/analytic-data__title.css);
 @import url(./__request/analytic-data__request.css);
 @import url(./__list/analytic-data__list.css);
-@import url(./__list-item/analytic-data__list-item.css);
+
 @import url(./__result/analytic-data__result.css);
 
 .analytics-data {

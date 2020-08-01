@@ -1,32 +1,17 @@
 .analytic-data__title {
   margin: 0 0 24px;
-  font-family: Roboto Slab;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 40px;
-  line-height: 46px;
-
-  color: #1a1b22;
 }
 
 @media (max-width: 769px) {
   .analytic-data__title {
     font-size: 32px;
-
-    line-height: 40px;
-  }
-}
-
-@media (max-width: 600px) {
-  .analytic-data__title {
-    line-height: 34px;
   }
 }
 
 @media (max-width: 340px) {
   .analytic-data__title {
+    max-width: 280px;
     font-size: 30px;
     margin: 16px 0 24px;
-    text-align: left;
   }
 }

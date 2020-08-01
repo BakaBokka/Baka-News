@@ -1,0 +1,23 @@
+.diagram__chart-bar {
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 16px;
+  color: #fff;
+  background-color: #2F71E5;
+  min-height: 24px;
+  margin-bottom: 56px;
+  display: flex;
+  align-items: center;
+  padding-left: 5px;
+}
+
+
+@media (max-width: 340px) {
+  .diagram__chart-bar {
+    margin-bottom: 24px;
+  }
+}
+
+.diagram__chart-bar:last-of-type {
+  margin: 0;
+}

@@ -1,0 +1,14 @@
+.diagram__title {
+  font-family: Roboto Slab, 'Times New Roman', Times, serif;
+  font-weight: normal;
+  font-size: 26px;
+  line-height: 30px;
+  margin: 0 0 48px;
+}
+
+
+@media (max-width: 340px) {
+  .diagram__title {
+    margin: 0 0 16px;
+  }
+}

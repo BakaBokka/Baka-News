@@ -1,0 +1,27 @@
+@import url(../diagram/__content/diagram__content.css);
+@import url(../diagram/__header/diagram__header.css);
+@import url(../diagram/__header-desc/diagram__header-desc.css);
+@import url(../diagram/__header-desc/diagram__header-desc_two-strings.css);
+@import url(../diagram/__title/diagram__title.css);
+@import url(../diagram/__field/diagram__field.css);
+@import url(../diagram/__chart-wrap/diagram__chart-wrap.css);
+@import url(../diagram/__chart/diagram__chart.css);
+@import url(../diagram/__chart-bar/diagram__chart-bar.css);
+@import url(../diagram/__chart-bar/_day/diagram__chart_day_monday.css);
+@import url(../diagram/__chart-bar/_day/diagram__chart_day_tuesday.css);
+@import url(../diagram/__chart-bar/_day/diagram__chart_day_wednesday.css);
+@import url(../diagram/__chart-bar/_day/diagram__chart_day_thursday.css);
+@import url(../diagram/__chart-bar/_day/diagram__chart_day_friday.css);
+@import url(../diagram/__chart-bar/_day/diagram__chart_day_saturday.css);
+@import url(../diagram/__chart-bar/_day/diagram__chart_day_sunday.css);
+@import url(../diagram/__liner/diagram__liner.css);
+@import url(../diagram/__liner-mark/diagram__liner-mark.css);
+@import url(../diagram/__calendar/diagram__calendar.css);
+@import url(../diagram/__calendar-date/diagram__calendar-date.css);
+
+.diagram {
+  background-color: #F5F6F7;
+  display: flex;
+  flex-direction: column;
+
+}
