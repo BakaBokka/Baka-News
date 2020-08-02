@@ -46,7 +46,7 @@ module.exports = {
             loader: "css-loader",
             options: {
               importLoaders: 2,
-              publicPath: '/dist/',
+              publicPath: '../',
             },
           },
           "postcss-loader",
