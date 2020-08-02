@@ -17,7 +17,7 @@
   "bugs": {
     "url": "https://github.com/BakaBokka/Baka-News/issues"
   },
-  "homepage": "https://github.com/BakaBokka/Baka-News#readme",
+  "homepage": "https://bakabokka.github.io/Baka-News/",
   "devDependencies": {
     "@babel/cli": "7.10.5",
     "@babel/core": "7.10.5",
