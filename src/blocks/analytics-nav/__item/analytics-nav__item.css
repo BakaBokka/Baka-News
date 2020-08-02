@@ -5,7 +5,7 @@
 .analytics-nav__item::before {
   color: rgba(26, 27, 34, 0.5);
   content: "/\00a0";
-  margin-right: -5px;
+  margin: 0 5px;
 }
 
 .analytics-nav__item:first-of-type::before {
