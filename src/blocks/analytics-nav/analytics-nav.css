@@ -7,10 +7,14 @@
   margin: 40px auto 80px;
 }
 
-
+@media (max-width: 769px) {
+  .analytics-nav {
+    margin: 32px auto 61px;
+  }
+}
 
 @media (max-width: 340px) {
-  .analytics-nav  {
+  .analytics-nav {
     display: none;
   }
 }

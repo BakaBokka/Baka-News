@@ -3,7 +3,7 @@
   width: 100%;
   gap: 32px;
   grid-template-columns: repeat(4, minmax(224px, 400px));
-  margin: 64px auto;
+  margin: 55px auto;
   justify-content: center;
 
 }
@@ -25,7 +25,7 @@
   .result__cards-container {
     gap: 8px;
     grid-template-columns: repeat(3, minmax(224px, 400px));
-    margin: 40px auto;
+    margin: 28px auto;
   }
 }
 
@@ -38,6 +38,6 @@
 @media (max-width: 500px) {
   .result__cards-container {
     grid-template-columns: repeat(1, minmax(224px, 400px));
-    margin: 32px auto;
+    margin: 35px auto;
   }
 }

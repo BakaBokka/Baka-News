@@ -1,11 +1,19 @@
 .search__text {
-  color: #FFFFFF;
+  color: #ffffff;
   /* max-width:545px; */
   margin: 0 0 64px;
+}
+
+@media (max-width: 769px) {
+  .search__text {
+    margin: 0 0 24px;
+  }
 }
 
 @media (max-width: 420px) {
   .search__text {
     margin: 0 0 64px;
+    font-size: 20px;
+    line-height: 26px;
   }
 }

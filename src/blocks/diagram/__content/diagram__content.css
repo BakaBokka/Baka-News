@@ -1,15 +1,15 @@
 .diagram__content {
-  margin: 80px auto 80px;
+  margin: 83px auto 72px;
 }
 
 @media (max-width: 769px) {
   .diagram__content {
-    margin: 40px auto 40px;
+    margin: 40px auto 32px;
   }
 }
 
 @media (max-width: 340px) {
   .diagram__content {
-    margin: 24px auto 40px;
+    margin: 29px auto 40px;
   }
 }

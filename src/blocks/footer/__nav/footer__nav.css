@@ -1,7 +1,14 @@
 .footer__nav{
   display: flex;
   justify-content: space-between;
-  margin-right: 16px;
+  margin-right: 10px;
+}
+
+@media (max-width: 769px) {
+  .footer__nav {
+    margin-right: 65px;
+
+  }
 }
 
 @media (max-width: 700px) {

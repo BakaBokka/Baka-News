@@ -18,3 +18,12 @@
 
   }
 }
+
+
+@media (max-width: 320px) {
+  .search__content {
+    margin: 86px 16px 17px;
+    max-width: 454px;
+
+  }
+}

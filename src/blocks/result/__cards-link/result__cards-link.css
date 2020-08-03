@@ -1,3 +1,10 @@
 .result__cards-link {
   display: flex;
+
+}
+
+@media (max-width: 320px) {
+  .result__cards-link {
+    padding: 0;
+  }
 }
