@@ -1,15 +1,15 @@
-.analytic-data__title {
+.analytics-data__title {
   margin: 0 0 24px;
 }
 
 @media (max-width: 769px) {
-  .analytic-data__title {
+  .analytics-data__title {
     font-size: 32px;
   }
 }
 
 @media (max-width: 340px) {
-  .analytic-data__title {
+  .analytics-data__title {
     max-width: 280px;
     font-size: 30px;
     margin: 16px 0 15px;
