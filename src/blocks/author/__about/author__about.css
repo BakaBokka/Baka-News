@@ -1,0 +1,20 @@
+.author__about {
+  display: flex;
+  flex-direction: column;
+  margin: 50px 0;
+
+  flex-shrink: 2;
+}
+
+@media (max-width: 769px) {
+  .author__about {
+    margin: 0;
+  }
+}
+
+
+@media (max-width: 420px) {
+  .author__about {
+    text-align: left;
+  }
+}

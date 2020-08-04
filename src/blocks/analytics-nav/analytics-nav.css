@@ -1,0 +1,20 @@
+@import url(./__links/analytics-nav__links.css);
+@import url(./__item/analytics-nav__item.css);
+@import url(./__link/analytics-nav__link.css);
+@import url(./__link/_active/analytics-nav__link_active.css);
+
+.analytics-nav {
+  margin: 40px auto 80px;
+}
+
+@media (max-width: 769px) {
+  .analytics-nav {
+    margin: 32px auto 61px;
+  }
+}
+
+@media (max-width: 340px) {
+  .analytics-nav {
+    display: none;
+  }
+}

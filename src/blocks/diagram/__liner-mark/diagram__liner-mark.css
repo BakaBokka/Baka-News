@@ -1,0 +1,10 @@
+.diagram__liner-mark {
+  font-size: 12px;
+  line-height: 16px;
+
+  text-align: center;
+  letter-spacing: 0.4px;
+  text-transform: uppercase;
+
+  color: #b6bcbf;
+}

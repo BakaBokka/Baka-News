@@ -1,0 +1,16 @@
+.diagram__liner {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  min-height: 44px;
+  align-items: center;
+}
+
+@media (max-width: 340px) {
+  .diagram__liner {
+    display: none;
+  }
+}

@@ -1,0 +1,14 @@
+.slider__button {
+  transform: translateY(-72%);
+    width: 56px;
+    height: 56px;
+    border-radius: 100%;
+    margin-right: 6px;
+    margin-left: 6px;
+}
+
+@media (max-width: 769px) {
+  .slider__button {
+    display: none;
+  }
+}

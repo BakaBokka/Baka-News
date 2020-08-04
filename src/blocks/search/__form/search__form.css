@@ -1,0 +1,9 @@
+.search__form {
+  position: relative;
+}
+
+@media (max-width: 500px) {
+  .search__form {
+    margin-bottom: 16px;
+  }
+}

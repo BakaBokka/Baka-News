@@ -1,0 +1,30 @@
+.diagram__calendar {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  margin: 44px 50px 0 0;
+  width: 60px;
+  white-space: nowrap;
+}
+
+@media (max-width: 769px) {
+  .diagram__calendar {
+    margin: 44px 67px 0 0;
+  }
+}
+
+
+@media (max-width: 600px) {
+  .diagram__calendar {
+    margin: 44px 24px 0 0;
+  }
+}
+
+
+@media (max-width: 340px) {
+  .diagram__calendar {
+    margin: 18px 31px 0 0;
+  }
+}

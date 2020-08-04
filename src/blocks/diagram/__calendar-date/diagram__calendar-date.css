@@ -1,0 +1,17 @@
+.diagram__calendar-date {
+  margin: 0 0 56px;
+  height: 24px;
+
+}
+
+@media (max-width: 340px) {
+  .diagram__calendar-date {
+    margin: 0 0 24px;
+
+  }
+}
+
+
+.diagram__calendar-date:last-of-type {
+  margin: 0;
+}

@@ -1,0 +1,13 @@
+.skills__tech {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+transition-duration: 1s;
+  margin: 0;
+  padding: 0;
+}
+
+.skills__tech:hover {
+ transform:scale(1.1)
+}

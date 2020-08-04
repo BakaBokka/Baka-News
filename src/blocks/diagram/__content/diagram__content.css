@@ -1,0 +1,15 @@
+.diagram__content {
+  margin: 83px auto 72px;
+}
+
+@media (max-width: 769px) {
+  .diagram__content {
+    margin: 40px auto 32px;
+  }
+}
+
+@media (max-width: 340px) {
+  .diagram__content {
+    margin: 29px auto 40px;
+  }
+}

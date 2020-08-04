@@ -1,0 +1,29 @@
+.footer__nav{
+  display: flex;
+  justify-content: space-between;
+  margin-right: 10px;
+}
+
+@media (max-width: 769px) {
+  .footer__nav {
+    margin-right: 65px;
+
+  }
+}
+
+@media (max-width: 700px) {
+  .footer__nav {
+   order: 1;
+   margin-bottom: 40px;
+
+  }
+}
+
+@media (max-width: 410px) {
+  .footer__nav {
+   order: 1;
+   margin-bottom: 40px;
+   margin-right: 33px;
+
+  }
+}

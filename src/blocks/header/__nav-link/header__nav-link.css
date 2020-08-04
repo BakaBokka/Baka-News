@@ -1,0 +1,9 @@
+.header__nav-link {
+  text-decoration: none;
+  color: #b6bcbf;
+  transition-duration: 1s;
+}
+
+.header__nav-link:hover {
+  color: #fff;
+}

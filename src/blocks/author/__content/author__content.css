@@ -1,0 +1,25 @@
+.author__content {
+  display: flex;
+
+  margin: 80px auto;
+}
+
+@media (min-width: 1441px) {
+  .author__content {
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+@media (max-width: 769px) {
+  .author__content {
+    margin: 40px auto 52px;
+  }
+}
+
+@media (max-width: 500px) {
+  .author__content {
+    flex-wrap: wrap;
+    margin: 32px auto 50px;
+  }
+}

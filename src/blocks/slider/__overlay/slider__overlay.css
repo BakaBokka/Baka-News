@@ -1,0 +1,23 @@
+.slider__overlay {
+  position: relative;
+  background: linear-gradient(180deg, rgba(245, 246, 247, 0) 0%, #F5F6F7 100%);
+  width: 100px;
+  height: 288px;
+
+  /* border-radius: 16px; */
+  z-index: 10;
+}
+
+@media (min-width: 1441px) {
+  .slider__overlay {
+    display: none;
+  }
+
+}
+
+@media (max-width: 1435px) {
+  .slider__overlay {
+    display: none;
+  }
+
+}

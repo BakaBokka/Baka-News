@@ -1,0 +1,14 @@
+.swiper-slide__content {
+  display: flex;
+  flex-direction: column;
+  padding: 24px;
+
+  height: 100%;
+
+}
+
+@media (max-width: 440px) {
+  .swiper-slide__content {
+    padding: 16px;
+  }
+}

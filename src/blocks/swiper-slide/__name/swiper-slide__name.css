@@ -1,0 +1,14 @@
+.swiper-slide__name {
+  font-family: Roboto Slab, "Times New Roman", Times, serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 26px;
+  line-height: 30px;
+  margin: 0;
+}
+
+@media (max-width: 769px) {
+  .swiper-slide__name {
+    font-size: 20px;
+  }
+}

@@ -1,0 +1,27 @@
+.section-container {
+  max-width: 85.76%;
+  width: 100%;
+}
+
+@media (max-width: 769px) {
+  .section-container {
+    max-width: 89.58%;
+    width: 100%;
+  }
+}
+
+
+@media (max-width: 420px) {
+  .section-container {
+    max-width: 92.38%;
+    width: 100%;
+    
+  }
+}
+
+@media (max-width: 321px) {
+  .section-container {
+    max-width: 90%;
+    width: 100%;
+  }
+}

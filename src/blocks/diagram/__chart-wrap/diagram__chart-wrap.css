@@ -1,0 +1,6 @@
+.diagram__chart-wrap {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+
+}

@@ -1,0 +1,9 @@
+.slider__overlay-wrap {
+  width: 100%;
+  height: 288px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: space-between;
+}

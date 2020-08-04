@@ -1,0 +1,20 @@
+.result-card__text {
+  font-size: 16px;
+  line-height: 22px;
+  margin: 0 0 18px;
+  -webkit-line-clamp: 4;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow-y: hidden;
+  word-wrap: break-word;
+}
+
+
+
+
+@media (max-width: 500px) {
+  .result-card__text  {
+    margin: 0 0 5px;
+    -webkit-line-clamp: 3;
+  }
+}

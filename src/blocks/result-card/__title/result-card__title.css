@@ -1,0 +1,27 @@
+.result-card__title {
+  font-family: Roboto Slab;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 26px;
+  line-height: 30px;
+  margin: 0 0 16px;
+}
+
+@media (max-width: 900px) {
+  .result-card__title {
+    font-size: 22px;
+    line-height: 24px;
+    margin: 0 0 10px;
+    -webkit-line-clamp: 3;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow-y: hidden;
+  word-wrap: break-word;
+  }
+}
+
+@media (max-width: 420px) {
+  .result-card__title {
+    line-height: 26px;
+  }
+}

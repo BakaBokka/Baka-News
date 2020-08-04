@@ -1,0 +1,10 @@
+.skills__tech-image {
+  width: 120px;
+  height: 120px;
+  transition-duration: 1s;
+}
+
+.skills__tech-image:hover {
+  transform:scale(1.1)
+  
+}

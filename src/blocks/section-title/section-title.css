@@ -1,0 +1,30 @@
+.section-title {
+  font-family: Roboto Slab, 'Times New Roman', Times, serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 40px;
+  line-height: 46px;
+
+  color: #1a1b22;
+}
+
+@media (max-width: 769px) {
+  .section-title {
+    font-size: 30px;
+    line-height: 40px;
+  }
+}
+
+@media (max-width: 600px) {
+  .section-title {
+    line-height: 34px;
+    margin-bottom: 16px;
+  }
+}
+
+@media (max-width: 340px) {
+  .section-title {
+    max-width: 200px;
+    text-align: left;
+  }
+}

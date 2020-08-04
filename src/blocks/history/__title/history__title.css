@@ -1,0 +1,9 @@
+.history__title {
+  margin: 0;
+}
+
+@media (max-width: 769px) {
+.history__title {
+  max-width: 338px;
+}
+}

@@ -1,0 +1,27 @@
+.skills__content {
+  margin: 80px auto 90px;
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  gap: 51px;
+}
+
+@media (min-width: 1441px) {
+  .skills__content {
+    grid-template-columns: 1fr 1fr;
+
+  }
+}
+
+
+@media (max-width: 890px) {
+  .skills__content {
+    grid-template-columns: none;
+    gap: 40px;
+  }
+}
+
+@media (max-width: 769px) {
+  .skills__content {
+    margin: 40px auto 46px;
+  }
+}

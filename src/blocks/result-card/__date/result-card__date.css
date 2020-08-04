@@ -1,0 +1,11 @@
+.result-card__date {
+  font-family: "Source Sans Pro", Arial, Helvetica, sans-serif;
+  margin: 0 0 12px;
+  color: #b6bcbf;
+}
+
+@media (max-width: 420px) {
+  .result-card__date {
+    margin: 0 0 15px;
+  }
+}

@@ -1,0 +1,29 @@
+.search__content {
+  margin: 160px auto 80px;
+  max-width: 608px;
+}
+
+@media (max-width: 769px) {
+  .search__content {
+    margin: 104px auto 48px;
+    max-width: 454px;
+  }
+}
+
+
+@media (max-width: 500px) {
+  .search__content {
+    margin: 86px 16px 32px;
+    max-width: 454px;
+
+  }
+}
+
+
+@media (max-width: 320px) {
+  .search__content {
+    margin: 86px 16px 17px;
+    max-width: 454px;
+
+  }
+}

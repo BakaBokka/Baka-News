@@ -1,0 +1,20 @@
+.slider__pagination {
+  position: relative;
+    margin-top: 47px;
+}
+
+@media (max-width: 769px) {
+
+  .slider__pagination {
+    margin-top: 31px;
+  }
+
+}
+
+@media (max-width: 321px) {
+
+  .slider__pagination {
+    margin-top: 16px;
+  }
+
+}

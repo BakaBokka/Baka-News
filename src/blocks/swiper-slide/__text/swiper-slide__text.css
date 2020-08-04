@@ -1,0 +1,10 @@
+.swiper-slide__text {
+  font-size: 16px;
+line-height: 22px;
+margin: 0;
+-webkit-line-clamp: 4;
+display: -webkit-box;
+-webkit-box-orient: vertical;
+overflow-y: hidden;
+word-wrap: break-word;
+}

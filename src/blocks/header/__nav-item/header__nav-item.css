@@ -1,0 +1,14 @@
+.header__nav-item {
+  margin-right: 34px;
+}
+
+.header__nav-item:last-of-type {
+  margin-right: 0;
+}
+
+@media (max-width: 420px) {
+  .header__nav-item {
+    margin-right: 11px;
+  }
+
+}

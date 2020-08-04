@@ -1,0 +1,14 @@
+.analytics-nav__link {
+  text-decoration: none;
+  transition-duration: 1s;
+  color: #1A1B22;
+
+}
+
+.analytics-nav__link:active {
+  color: rgba(26, 27, 34, 0.5);
+}
+
+.analytics-nav__link:hover {
+  color: rgba(26, 27, 34, 0.5);
+}

@@ -1,0 +1,16 @@
+.info__content {
+  margin: 80px auto 113px;
+}
+
+@media (max-width: 769px) {
+  .info__content {
+    margin: 30px auto 70px;
+  }
+}
+
+
+@media (max-width: 440px) {
+  .info__content {
+    margin: 24px auto 40px;
+  }
+}

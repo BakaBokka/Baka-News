@@ -1,0 +1,28 @@
+.result__cards-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+}
+
+
+@media (max-width: 769px) {
+  .result__cards-header {
+
+  }
+}
+
+@media (max-width: 721px) {
+  .result__cards-header{
+
+  }
+}
+
+@media (max-width: 600px) {
+  .result__cards-header {
+
+    flex-direction: column;
+    align-items: flex-start;
+    ;
+  }
+}

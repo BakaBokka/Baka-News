@@ -1,0 +1,41 @@
+.header__nav-link_active_dark {
+  color: #000;
+
+  position: relative;
+
+}
+
+
+.header__nav-link_active_dark:before {
+  display: block;
+  position: absolute;
+  content: "";
+  height: 3px;
+  width: 100%;
+  background: #000;
+
+  left: 0;
+  top: 48px;
+}
+
+@media (max-width: 768px) {
+  .header__nav-link_active_dark:before {
+    top: 40px;
+  }
+}
+
+
+@media (max-width: 320px) {
+  .header__nav-link_active_dark:before {
+    top: 35px;
+  }
+}
+
+.header__nav-link_active_dark:hover:before {
+  color: #b6bcbf;
+  background: #b6bcbf;
+}
+
+.header__nav-link_active_dark:hover {
+  color: #b6bcbf;
+}

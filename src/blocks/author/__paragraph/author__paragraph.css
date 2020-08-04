@@ -1,0 +1,13 @@
+.author__paragraph {
+  margin: 0 0 20px;
+}
+
+.author__paragraph:last-of-type {
+  margin: 0;
+}
+
+@media (max-width: 769px) {
+  .author__paragraph {
+    margin: 0;
+  }
+}

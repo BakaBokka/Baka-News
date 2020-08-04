@@ -1,0 +1,46 @@
+.section-button {
+  font-family: Roboto, Arial, Helvetica, sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 24px;
+  border-radius: 80px;
+
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  border-width: 0;
+  color: #1a1b22;
+  background-color: #fff;
+  width: 288px;
+  height: 64px;
+
+  cursor: pointer;
+  box-shadow: 0px 3px 10px rgba(14, 26, 57, 0.1);
+  transition-duration: 0.5s;
+  outline: none;
+}
+
+.section-button:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  box-shadow: 0px 3px 10px rgba(14, 26, 57, 0.3);
+}
+
+.section-button:active {
+  background-color: lightgray;
+  color: #fff;
+}
+
+@media (max-width: 769px) {
+  .section-button {
+    width: 240px;
+    height: 56px;
+  }
+}
+
+@media (max-width: 440px) {
+  .section-button {
+    width: 288px;
+    height: 56px;
+  }
+}

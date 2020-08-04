@@ -1,0 +1,30 @@
+.author__photo {
+  border-radius: 100%;
+  margin-right: 56px;
+  max-width: 464px;
+  max-height: 464px;
+  flex-shrink: 1;
+  transition-duration: 1s;
+  cursor: pointer;
+
+}
+
+@media (max-width: 768px) {
+  .author__photo {
+    margin: 20px  32px 0 0 ;
+  }
+}
+
+
+@media (max-width: 420px) {
+  .author__photo {
+    margin: 0 0 24px;
+  }
+}
+
+
+.author__photo:hover {
+
+  opacity: 0.9;
+
+}

@@ -1,0 +1,9 @@
+.skills__tech-caption {
+  margin: 10px auto;
+}
+
+@media (max-width: 769px) {
+  .skills__tech-caption {
+    margin: 0 auto;
+  }
+}

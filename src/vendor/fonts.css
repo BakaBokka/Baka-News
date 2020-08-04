@@ -1,0 +1,46 @@
+@font-face {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  src: url("./fonts/Roboto.woff2") format("woff2"),
+    url("./fonts/Roboto.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 500;
+  src: url("./fonts/Robotomedium.woff2") format("woff2"),
+    url("./fonts/Robotomedium.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 700;
+  src: url("./fonts/Robotobold.woff2") format("woff2"),
+    url("./fonts/Robotobold.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Roboto Slab";
+  font-style: normal;
+  font-weight: 400;
+  src: url("./fonts/Robotoslabregular.woff2") format("woff2"),
+    url("./fonts/Robotoslabregular.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Roboto Slab";
+  font-style: normal;
+  font-weight: 700;
+  src: url("./fonts/Robotoslabbold.woff2") format("woff2"),
+    url("./fonts/Robotoslabbold.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Source Sans Pro";
+  font-style: normal;
+  font-weight: 400;
+  src: url("./fonts/sourcesanspro-regular.woff") format("woff");
+}
