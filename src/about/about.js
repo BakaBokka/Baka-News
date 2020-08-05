@@ -1,5 +1,5 @@
 import "swiper/swiper-bundle.css";
-import "./pages/about.css";
+import "../pages/about.css";
 import Swiper, { Navigation, Pagination } from "swiper";
 
 // configure Swiper to use modules
