@@ -1,4 +1,22 @@
 .result-card__image {
+  background-image: url(#);
+  background-size: contain;
+  background-position: center;
+  background-repeat: repeat-y;
   width: 100%;
+  min-height: 272px;
 
+}
+
+@media (max-width: 769px) {
+  .result-card__image {
+    min-height: 150px;
+  }
+}
+
+
+@media (max-width: 500px) {
+  .result-card__image {
+    min-height: 196px;
+  }
 }

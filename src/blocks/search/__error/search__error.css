@@ -1,0 +1,12 @@
+.search__error {
+  max-width: 100%;
+  display: block;
+  box-sizing: border-box;
+  padding: 0;
+
+  color: #fff;
+  height: 24px;
+  position: absolute;
+  left: 30px;
+  top: 70px;
+}

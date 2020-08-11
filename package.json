@@ -1,6 +1,6 @@
 {
   "name": "baka-news",
-  "version": "0.0.14",
+  "version": "0.0.15",
   "description": "YaP diploma project",
   "main": "index.js",
   "scripts": {

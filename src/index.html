@@ -7,15 +7,19 @@
     <meta name="description" content="Diploma project for YaP" />
     <title>Baka News</title>
 
-    <link rel="icon" href="<%=require('./images/favicon.svg')%>" sizes="any" type="image/svg+xml" />
-
+    <link
+      rel="icon"
+      href="<%=require('./images/favicon.svg')%>"
+      sizes="any"
+      type="image/svg+xml"
+    />
   </head>
   <body class="page">
-
-
     <header class="header">
       <div class="header__content section-container">
-        <a href="https://bakabokka.github.io/Baka-News/index.html" class="header__logo-link"
+        <a
+          href="https://bakabokka.github.io/Baka-News/index.html"
+          class="header__logo-link"
           ><img
             src="<%=require('./images/NewsAnalyzer-logo.svg')%>"
             alt="Логотип"
@@ -25,18 +29,23 @@
         <nav class="header__nav">
           <ul class="header__nav-links">
             <li class="header__nav-item">
-              <a href="https://bakabokka.github.io/Baka-News/index.html" class="header__nav-link header__nav-link_active_light"
+              <a
+                href="https://bakabokka.github.io/Baka-News/index.html"
+                class="header__nav-link header__nav-link_active_light"
                 >Главная</a
               >
             </li>
             <li class="header__nav-item">
-              <a href="https://bakabokka.github.io/Baka-News/about.html" class="header__nav-link">О проекте</a>
+              <a
+                href="https://bakabokka.github.io/Baka-News/about.html"
+                class="header__nav-link"
+                >О проекте</a
+              >
             </li>
           </ul>
         </nav>
       </div>
     </header>
-
 
     <section class="search">
       <div class="search__content">
@@ -45,40 +54,31 @@
           Введите в поиске любую тему и узнайте, насколько популярной она была в
           новостях за прошедшую неделю.
         </p>
-        <form class="search__form">
+        <form class="search__form" novalidate>
           <input
             type="search"
             placeholder="Введите тему новости"
-            id="search"
             class="search__from-input"
             required
           />
+          <span class="search__error"></span>
 
-          <!-- Позжк поставить тип - сабмит в кнопке  -->
-          <button
-            type="button"
-
-            id="submit"
-            class="search__form-submit "
-          > Искать
-          </button>
+          <button type="submit" class="search__form-submit">Искать</button>
         </form>
       </div>
     </section>
 
-
-
     <section class="result">
-      <div class="result__content section-container">
+      <div class="result__content section-container result__content_hide">
         <!-- Прелоадер -->
-        <div class="result__preloader">
+        <div class="result__preloader result__preloader_hide">
           <div class="result__preloader-circle"></div>
           <p class="result__preloader-message">
             Идет поиск новостей...
           </p>
         </div>
-
-        <div class="result__not-found">
+<!-- Картинка и сообщение — Ничего не найдено -->
+        <div class="result__not-found result__not-found_hide">
           <img
             src="<%=require('./images/not-found_v1.png')%>"
             alt="Иконка 'Не найдено'"
@@ -89,183 +89,45 @@
             К сожалению по вашему запросу ничего не найдено.
           </p>
         </div>
-        <div class="result__cards ">
+
+        <!-- Картинка и сообщение — Что-то пошло не так -->
+        <div class="result__error result__error_hide">
+          <img
+          src="<%=require('./images/not-found_v1.png')%>"
+            alt="Иконка 'Не найдено'"
+            class="result__error-image"
+          />
+          <p class="result__error-accent">Что-то пошло не так..</p>
+          <p class="result__error-message">
+            К сожалению по вашему запросу ничего не найдено.
+          </p>
+        </div>
+
+        <div class="result__cards result__cards_hide">
           <div class="result__cards-header">
             <h2 class="result__cards-title section-title">Результаты поиска</h2>
-            <a href="https://bakabokka.github.io/Baka-News/analytics.html" class="result__cards-link section-link">Посмотреть аналитику </a>
+            <a
+              href="https://bakabokka.github.io/Baka-News/analytics.html"
+              class="result__cards-link section-link"
+              >Посмотреть аналитику
+            </a>
           </div>
 
           <!-- Контейнер для карточек -->
-          <div class="result__cards-container ">
+          <ul class="result__cards-container">
 
-            <div class="result-card">
-              <img
-                class="result-card__image"
-                src="<%=require('./images/card-background/image_1.jpg')%>"
-                alt="Обложка фотопроекте «Национальное достояние»"
-
-              >
-              <div class="result-card__desc">
-                <a href="https://nat-geo.ru/nature/natsionalnoe-dostoyanie-parki" class="result-card__link" target="_blank">
-                <p class="result-card__date">2 августа, 2019</p>
-
-                <h3 class="result-card__title">
-                  Национальное достояние – парки
-                </h3>
-
-                  <p class="result-card__text">
-                    В 2016 году Америка отмечала важный юбилей: сто лет назад
-                    здесь начала складываться система национальных парков –
-                    охраняемых территорий, где и сегодня каждый может
-                    приобщиться к природе.
-                  </p>
-                </a>
-                  <p class="result-card__origin">Лента.ру</p>
-
-              </div>
-            </div>
-
-
-            <div class="result-card">
-              <img
-                class="result-card__image"
-                src="<%=require('./images/card-background/image_2.jpg')%>"
-                alt="Обложка фотопроекте «Лесные огоньки»"
-              >
-              <div class="result-card__desc">
-                <a href="https://nat-geo.ru/nature/lesnye-ogonki-istoriya-odnoj-fotografii" class="result-card__link" target="_blank">
-                <p class="result-card__date">2 августа, 2019</p>
-
-                <h3 class="result-card__title">
-                  Лесные огоньки: история одной фотографии
-                </h3>
-
-
-                  <p class="result-card__text">
-                    Фотограф отвлеклась от освещения суровой политической реальности Мексики,
-                    чтобы запечатлеть ускользающую красоту одного
-                    из местных чудес природы.
-
-                  </p>
-                </a>
-                  <p class="result-card__origin">Медуза</p>
-
-              </div>
-            </div>
-
-
-            <div class="result-card">
-              <img
-                class="result-card__image"
-                src="<%=require('./images/card-background/image_3.jpg')%>"
-
-                alt="Обложка фотопроекте «Первозданная тайга»">
-              <div class="result-card__desc">
-                <a href="https://nat-geo.ru/nature/pervozdannaya-tajga-novyj-fotoproekt-igorya-shpilenka" class="result-card__link" target="_blank">
-                <p class="result-card__date">2 августа, 2019</p>
-
-                <h3 class="result-card__title">
-                  «Первозданная тайга»: новый фотопроект Игоря Шпиленка
-                </h3>
-
-
-                  <p class="result-card__text">
-                    Знаменитый фотограф снимает первозданные леса России,
-                    чтобы рассказать о необходимости их сохранения. В этот раз он отправился в Двинско-Пинежскую тайгу, где...
-                  </p>
-                  </a>
-                  <p class="result-card__origin">Риа</p>
-
-              </div>
-            </div>
-
-            <div class="result-card">
-              <img
-                class="result-card__image"
-                src="<%=require('./images/card-background/image_4.jpg')%>"
-                alt="Обложка фотопроекте «Национальное достояние»"
-
-              >
-              <div class="result-card__desc">
-                <a href="https://nat-geo.ru/nature/natsionalnoe-dostoyanie-parki" class="result-card__link" target="_blank">
-                <p class="result-card__date">2 августа, 2019</p>
-
-                <h3 class="result-card__title">
-                  Национальное достояние – парки
-                </h3>
-
-
-                  <p class="result-card__text">
-                    В 2016 году Америка отмечала важный юбилей: сто лет назад здесь начала складываться система национальных парков – охраняемых территорий, где и сегодня каждый может приобщиться к природе.
-                  </p>
-                  </a>
-                  <p class="result-card__origin">Дзен</p>
-
-              </div>
-            </div>
-
-            <div class="result-card">
-              <img
-                class="result-card__image"
-                src="<%=require('./images/card-background/image_5.jpg')%>"
-                alt="Обложка фотопроекте «Лесные огоньки»"
-
-              >
-              <div class="result-card__desc">
-                <a href="https://nat-geo.ru/nature/lesnye-ogonki-istoriya-odnoj-fotografii" class="result-card__link" target="_blank">
-                <p class="result-card__date">2 августа, 2019</p>
-
-                <h3 class="result-card__title">
-                  Лесные огоньки: история одной фотографии
-                </h3>
-
-
-                  <p class="result-card__text">
-                    Фотограф отвлеклась от освещения суровой политической реальности Мексики, чтобы запечатлеть ускользающую красоту одного
-из местных чудес природы.
-
-                  </p>
-                </a>
-                  <p class="result-card__origin">Афиша</p>
-
-              </div>
-            </div>
-
-            <div class="result-card">
-              <img
-                class="result-card__image"
-                src="<%=require('./images/card-background/image_6.jpg')%>"
-
-              alt="Обложка фотопроекте «Первозданная тайга»">
-              <div class="result-card__desc">
-                <a href="https://nat-geo.ru/nature/pervozdannaya-tajga-novyj-fotoproekt-igorya-shpilenka" class="result-card__link" target="_blank">
-                <p class="result-card__date">2 августа, 2019</p>
-
-                <h3 class="result-card__title">
-                  «Первозданная тайга»: новый фотопроект Игоря Шпиленка
-                </h3>
-
-
-                  <p class="result-card__text">
-                    Знаменитый фотограф снимает первозданные леса России, чтобы рассказать о необходимости их сохранения. В этот раз он отправился в Двинско-Пинежскую тайгу, где...
-                  </p>
-                  </a>
-                  <p class="result-card__origin">Медиазона</p>
-
-              </div>
-            </div>
-
-          </div>
+          </ul>
           <!-- Конец контейнера для карточек -->
 
-          <button class="result__cards-button section-button">Показать еще</button>
+          <button class="result__cards-button section-button">
+            Показать еще
+          </button>
         </div>
       </div>
     </section>
 
     <section class="author">
       <div class="author__content section-container">
-
         <picture class="author__photo">
           <source
             media="(max-width: 420px)"
@@ -284,7 +146,6 @@
             alt="Красивая фотокарточка с лицом автора"
           />
         </picture>
-
 
         <div class="author__about">
           <h2 class="author__title section-title">Об авторе</h2>
@@ -305,19 +166,33 @@
 
     <footer class="footer">
       <div class="footer__content section-container">
-        <a href="https://github.com/BakaBokka" class="footer__copyright" target="_blank"
+        <a
+          href="https://github.com/BakaBokka"
+          class="footer__copyright"
+          target="_blank"
           >&#169; 2020 BakaBokka</a
         >
         <nav class="footer__nav">
           <ul class="footer__nav-links">
             <li class="footer__nav-item">
-              <a href="https://bakabokka.github.io/Baka-News/index.html" class="footer__nav-link">Главная</a>
+              <a
+                href="https://bakabokka.github.io/Baka-News/index.html"
+                class="footer__nav-link"
+                >Главная</a
+              >
             </li>
             <li class="footer__nav-item">
-              <a href="https://bakabokka.github.io/Baka-News/about.html" class="footer__nav-link">О проекте</a>
+              <a
+                href="https://bakabokka.github.io/Baka-News/about.html"
+                class="footer__nav-link"
+                >О проекте</a
+              >
             </li>
             <li class="footer__nav-item">
-              <a href="https://praktikum.yandex.ru/" class="footer__nav-link" target="_blank"
+              <a
+                href="https://praktikum.yandex.ru/"
+                class="footer__nav-link"
+                target="_blank"
                 >Яндекс.Практикум</a
               >
             </li>
@@ -326,7 +201,11 @@
 
         <ul class="footer__socials">
           <li class="footer__social">
-            <a href="https://github.com/BakaBokka" class="footer__social-link" target="_blank">
+            <a
+              href="https://github.com/BakaBokka"
+              class="footer__social-link"
+              target="_blank"
+            >
               <img
                 src="<%=require('./images/github.jpg')%>"
                 alt="Иконка Гитхаб"
@@ -335,7 +214,11 @@
             </a>
           </li>
           <li class="footer__social">
-            <a href="https://www.facebook.com/" class="footer__social-link" target="_blank">
+            <a
+              href="https://www.facebook.com/"
+              class="footer__social-link"
+              target="_blank"
+            >
               <img
                 src="<%=require('./images/fb.jpg')%>"
                 alt="Иконка Фейсбук"
@@ -349,30 +232,24 @@
 
     <!-- Пример карточки с результатом поиска -->
     <template id="template-card">
-
-      <div class="result-card">
-        <img
-          class="result-card__image"
-          src=""
-
-        >
+      <li class="result-card">
+        <div class="result-card__image"></div>
         <div class="result-card__desc">
-          <a href="#" class="result-card__link" target="_blank" alt="Пример карточки">
-          <p class="result-card__date"></p>
+          <a
+            href="#"
+            class="result-card__link"
+            target="_blank"
+            alt="Пример карточки"
+          >
+            <p class="result-card__date"></p>
 
-          <h3 class="result-card__title">
+            <h3 class="result-card__title"></h3>
 
-          </h3>
-
-
-            <p class="result-card__text">
-
-            </p>
-            </a>
-            <p class="result-card__origin"></p>
-
+            <p class="result-card__text"></p>
+          </a>
+          <p class="result-card__origin"></p>
         </div>
-      </div>
+      </li>
     </template>
     <!-- конец примера -->
   </body>
