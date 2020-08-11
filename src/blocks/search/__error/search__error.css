@@ -1,12 +1,19 @@
 .search__error {
   max-width: 100%;
+  width: 75%;
+  border-radius: 50px;
   display: block;
   box-sizing: border-box;
-  padding: 0;
-
+  padding:  0;
   color: #fff;
+
   height: 24px;
   position: absolute;
   left: 30px;
   top: 70px;
+  /* background-image: url(../../../images/red-cross.png);
+  background-position: left;
+  background-size: contain;
+  background-repeat: no-repeat; */
+
 }

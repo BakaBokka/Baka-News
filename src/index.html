@@ -60,10 +60,13 @@
             placeholder="Введите тему новости"
             class="search__from-input"
             required
+            minlength="2"
+            maxlength="30"
+
           />
           <span class="search__error"></span>
 
-          <button type="submit" class="search__form-submit">Искать</button>
+          <button type="submit" class="search__form-submit" disabled>Искать</button>
         </form>
       </div>
     </section>

@@ -68,6 +68,7 @@ function loadNews() {
   resultNotFound.classList.add("result__not-found_hide");
   resultError.classList.add('result__error_hide');
   showResults();
+  searchInput.disableSubmitButton();
 
   newsApi
     .getNews(input.value, requestFromDate, requestToDate)
@@ -83,7 +84,7 @@ function loadNews() {
       hideResultCards()
       storage.clearItems();
       return Promise.reject(error);
-      
+
     })
     .then(() => {
       const articles = storage.getItem();
@@ -100,6 +101,7 @@ function loadNews() {
 
     .finally(() => {
       togglePreloader();
+      searchInput.activateSubmitButton();
     });
   event.preventDefault();
   form.reset();
@@ -138,6 +140,7 @@ if (localStorage["totalResults"] && localStorage["totalResults"] !== '0') {
    showResults();
    if(localStorage["request"]){
     input.value = localStorage["request"];
+    searchInput.activateSubmitButton();
   }
 }
 
