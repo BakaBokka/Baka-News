@@ -6,6 +6,7 @@ import { SearchInput } from "./js/components/SearchInput";
 import { NewsCard } from "./js/components/NewsCard";
 import { NewsCardList } from "./js/components/NewsCardList";
 
+
 //Общие переменные
 const form = document.querySelector(".search__form");
 const input = form.querySelector(".search__from-input");
@@ -75,7 +76,7 @@ function loadNews() {
     .then((result) => {
       storage.setItems(result);
       input.value = localStorage["request"];
-      console.log(localStorage);
+
     })
 
     .catch((error) => {
@@ -88,7 +89,7 @@ function loadNews() {
     })
     .then(() => {
       const articles = storage.getItem();
-      console.log(articles);
+
       if (articles.length === 0) {
         resultNotFound.classList.remove("result__not-found_hide");
         hideResultCards();
@@ -136,7 +137,7 @@ searchInput.setEventListener();
 if (localStorage["totalResults"] && localStorage["totalResults"] !== '0') {
   showResultCards();
   newCardList.render();
-  console.log(localStorage["request"]);
+
    showResults();
    if(localStorage["request"]){
     input.value = localStorage["request"];
@@ -149,3 +150,4 @@ if (localStorage["totalResults"] && localStorage["totalResults"] !== '0') {
 resultButton.addEventListener("click", () => {
   newCardList.render();
 });
+

@@ -183,6 +183,13 @@ export class NewsDate {
     return this.Day;
   };
 
+  _getWeekDay(date) {
+    const days = ["вс", "пн", "вт", "ср", "чт", "пт", "сб"];
+    const day = date.getDay();
+
+    return days[day];
+  }
+
   renderCardDate = (date) => {
     return (this.newsDate =
       `${date.getDate()}` +
@@ -199,5 +206,10 @@ export class NewsDate {
       `${this._getNumMonth(date)}` +
       "-" +
       `${this._getNumDay(date)}`);
+  };
+
+  renderStatsDate = (date) => {
+    console.log(this.statsDate =
+      `${this._getNumDay(date)}` + ", " + `${this. _getWeekDay(date)}`);
   };
 }

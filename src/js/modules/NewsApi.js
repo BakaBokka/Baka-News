@@ -11,6 +11,7 @@ export class NewsApi {
         `q=${request}` +
         `&from=${fromDate}` +
         `&to=${toDate}` +
+        "&sortBy=publishedAt" +
         "&pageSize=100&" +
         "apiKey=8aeeba1f3009478aa34ad87aeda059be"
     ).then((res) => {

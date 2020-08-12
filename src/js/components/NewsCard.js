@@ -2,10 +2,7 @@
 export class NewsCard {
   constructor(data) {
     this.data = data;
-
   }
-
-
 
   //Метод собирает карточку по темплейту
   createCard(template) {
@@ -16,15 +13,18 @@ export class NewsCard {
       newCard.querySelector(
         ".result-card__image"
       ).style.backgroundImage = `url(../src/images/Fib.png)`;
+
       newCard.querySelector(
         ".result-card__image"
       ).style.backgroundPosition = `right`;
     } else
-    newCard.querySelector(
-      ".result-card__image"
-    ).style.backgroundImage = `url(${this.data.image})`;
+      newCard.querySelector(
+        ".result-card__image"
+      ).style.backgroundImage = `url(${this.data.image})`;
 
-    newCard.querySelector(".result-card__link").setAttribute('href', this.data.url);
+    newCard
+      .querySelector(".result-card__link")
+      .setAttribute("href", this.data.url);
     newCard.querySelector(".result-card__date").textContent = this.data.date;
     newCard.querySelector(".result-card__text").textContent = this.data.desc;
     newCard.querySelector(
@@ -32,8 +32,6 @@ export class NewsCard {
     ).textContent = this.data.source;
 
     this.placeCard = newCard;
-
-    // this.setEventListeners();
 
     return newCard;
   }

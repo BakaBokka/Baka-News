@@ -34,8 +34,7 @@ export class NewsCardList {
 
       this.start = this.start + 3;
       this.stop = this.stop + 3;
-      console.log(this.start, this.stop);
-
+     
       if (this.storage.getItem().length > this.start) {
         this.button.style.display = "flex";
       } else {
