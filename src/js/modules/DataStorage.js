@@ -2,7 +2,10 @@
 export class DataStorage {
   constructor() {
     this.articles = this.getItem();
-    console.log(this.articles);
+
+    //Массив с отформатированными датами
+    this.formatedArticles = this.formatDates();
+
     this.request = localStorage["request"];
   }
   //Метод загружает в хранилище строку со всеми новостями
@@ -70,12 +73,44 @@ export class DataStorage {
 
   getNewsDates = (array) => {
     this.datesArray = [];
-    for (let i = array.length -1; i >= 0; i--) {
-      this.datesArray.push(array[i]);
+    for (let i = array.length - 1; i >= 0; i--) {
+      this.datesArray.push(array[i].publishedAt);
     }
-    console.log(this.datesArray);
+
     return this.datesArray;
-  }
+  };
+
+  //Метод убирает время из даты в массиве
+  formatDates = () => {
+    this.articles.forEach((item) => {
+      if (item.publishedAt) {
+        item.publishedAt = item.publishedAt.slice(0, -10);
+      }
+    });
+    return this.articles;
+  };
+  //Метод создаёт отсортированный по дате массив заголовков и описаний
+  sortByDate = (date) => {
+    this.sortedArray = [];
+
+    this.formatedArticles.map((item) => {
+      if (item.publishedAt === date) {
+        this.sortedArray.push(item.publishedAt);
+        this.sortedArray.push(item.title);
+        this.sortedArray.push(item.description);
+      }
+    });
+    return this.sortedArray;
+  };
+
+  //Метод получает заголовки, где упоминается запрос инпута
+  getMentions = (array) => {
+    return array.filter((item) => {
+      const mention = item.toLowerCase();
+
+      return mention.indexOf(this.request.toLowerCase()) > -1;
+    });
+  };
 
   //Метод очищает хранилище
   clearItems = () => {

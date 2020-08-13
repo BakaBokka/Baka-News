@@ -6,7 +6,6 @@ import { SearchInput } from "./js/components/SearchInput";
 import { NewsCard } from "./js/components/NewsCard";
 import { NewsCardList } from "./js/components/NewsCardList";
 
-
 //Общие переменные
 const form = document.querySelector(".search__form");
 const input = form.querySelector(".search__from-input");
@@ -18,7 +17,7 @@ const resultButton = document.querySelector(".result__cards-button");
 const preloader = document.querySelector(".result__preloader");
 const resultNotFound = document.querySelector(".result__not-found");
 const resultCards = document.querySelector(".result__cards");
-const resultError = document.querySelector('.result__error');
+const resultError = document.querySelector(".result__error");
 
 //Переменные классов
 const dates = new NewsDate();
@@ -67,7 +66,7 @@ function loadNews() {
   storage.setRequest(input.value);
   togglePreloader();
   resultNotFound.classList.add("result__not-found_hide");
-  resultError.classList.add('result__error_hide');
+  resultError.classList.add("result__error_hide");
   showResults();
   searchInput.disableSubmitButton();
 
@@ -76,16 +75,14 @@ function loadNews() {
     .then((result) => {
       storage.setItems(result);
       input.value = localStorage["request"];
-
     })
 
     .catch((error) => {
       console.log("Произошла ужасная ошбика:", error);
-      resultError.classList.remove('result__error_hide');
-      hideResultCards()
+      resultError.classList.remove("result__error_hide");
+      hideResultCards();
       storage.clearItems();
       return Promise.reject(error);
-
     })
     .then(() => {
       const articles = storage.getItem();
@@ -126,7 +123,6 @@ const getFromDate = (date, days) => {
 
 //Вызовы функций
 getFromDate(new Date(), 7);
-
 const requestToDate = dates.renderRequestDate(new Date());
 const requestFromDate = dates.renderRequestDate(
   getRequestFromDate(new Date(), 7)
@@ -134,20 +130,17 @@ const requestFromDate = dates.renderRequestDate(
 
 searchInput.setEventListener();
 
-if (localStorage["totalResults"] && localStorage["totalResults"] !== '0') {
+if (localStorage["totalResults"] && localStorage["totalResults"] !== "0") {
   showResultCards();
   newCardList.render();
 
-   showResults();
-   if(localStorage["request"]){
+  showResults();
+  if (localStorage["request"]) {
     input.value = localStorage["request"];
     searchInput.activateSubmitButton();
   }
 }
 
-
-
 resultButton.addEventListener("click", () => {
   newCardList.render();
 });
-

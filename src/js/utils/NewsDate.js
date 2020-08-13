@@ -1,6 +1,8 @@
 "use strict";
 export class NewsDate {
-  _getFullMonth = (date) => {
+  constructor() {}
+  //Метод получает полное название месяца в подходящем для карточки формате
+  _getCardMonth = (date) => {
     switch (date.getMonth()) {
       case 0:
         this.fullMonth = "января";
@@ -42,6 +44,7 @@ export class NewsDate {
     return this.fullMonth;
   };
 
+  //Метод получает правильный номер месяца
   _getNumMonth = (date) => {
     switch (date.getMonth()) {
       case 0:
@@ -84,6 +87,7 @@ export class NewsDate {
     return this.Month;
   };
 
+  //Метод получает правильный номер дня
   _getNumDay = (date) => {
     switch (date.getDate()) {
       case 1:
@@ -183,6 +187,7 @@ export class NewsDate {
     return this.Day;
   };
 
+  //Метод получает буквенное обозначения дня недели
   _getWeekDay(date) {
     const days = ["вс", "пн", "вт", "ср", "чт", "пт", "сб"];
     const day = date.getDay();
@@ -190,15 +195,25 @@ export class NewsDate {
     return days[day];
   }
 
+//Метод получает полное название месяца для шапки диаграммы
+  _getFullMonth(date) {
+    const months = ["январь", "февраль", "март", "апрель", "май", "июнь", "июль", "август", "сентябрь", "октябрь", "ноябрь", "декабрь"];
+    const month = date.getMonth();
+
+    return months[month];
+  }
+
+  //Метод выдает дату в верном формате для карточки поиска
   renderCardDate = (date) => {
     return (this.newsDate =
       `${date.getDate()}` +
       " " +
-      `${this._getFullMonth(date)}` +
+      `${this._getCardMonth(date)}` +
       ", " +
       `${date.getFullYear()}`);
   };
 
+  //Метод выдает дату в верном формате для запроса в АПИ новостей
   renderRequestDate = (date) => {
     return (this.requestDate =
       `${date.getFullYear()}` +
@@ -208,8 +223,42 @@ export class NewsDate {
       `${this._getNumDay(date)}`);
   };
 
-  renderStatsDate = (date) => {
-    console.log(this.statsDate =
-      `${this._getNumDay(date)}` + ", " + `${this. _getWeekDay(date)}`);
+  //Метод выдает даты в верном формате для диаграммы аналитики
+  renderStatsDates = (date) => {
+    this.firstDate =
+      `${this._getNumDay(date)}` + ", " + `${this._getWeekDay(date)}`;
+      console.log(this.firstDate)
+    this.statsDates = [this.firstDate];
+    for (let i = 1; i <= 6; i++) {
+      this.weekDay = new Date(date.setDate(date.getDate() - 1));
+
+      this.statsDate =
+        `${this._getNumDay(this.weekDay)}` +
+        ", " +
+        `${this._getWeekDay(this.weekDay)}`;
+
+      this.statsDates.unshift(this.statsDate);
+    }
+    console.log(this.firstDate)
+
+    return this.statsDates;
   };
+
+//Медот выдает даты в верном формате для прогресс-баров диаграммы
+  renderChartDates = (date) => {
+    this.firstDate = this.renderRequestDate(date)
+    this.chartDates = [this.firstDate]
+    for (let i = 1; i <= 6; i++) {
+      this.weekDay = new Date(date.setDate(date.getDate() - 1));
+      this.chartDate = this.renderRequestDate(this.weekDay)
+      this.chartDates.unshift(this.chartDate);
+    }
+    return this.chartDates
+  }
+
+//Метод выдает название месяца для шапки диаграммы
+  renderDiagramMonth = (date) => {
+    return this._getFullMonth(date);
+  }
+
 }
