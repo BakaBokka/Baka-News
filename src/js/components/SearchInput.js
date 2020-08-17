@@ -18,6 +18,7 @@ export class SearchInput {
     this._form.addEventListener("input", this._handlerInputForm, true);
   };
 
+  //Валидация
   _isFieldValid = (input) => {
     const valid = this._checkInputValidity(input);
     this._errorElement.textContent = input.validationMessage;
@@ -26,24 +27,30 @@ export class SearchInput {
 
   _checkInputValidity = (input) => {
     input.setCustomValidity("");
+    input.classList.remove('search__from-input_not-valid');
+
 
     //Проверка на пустоту инпута
     if (input.validity.valueMissing) {
       input.setCustomValidity(ERROR_MESSAGES.empty);
+      input.classList.add('search__from-input_not-valid');
       return false;
     }
     //Проверка на минимальное и максимальное количество символов в инпуте. В ссылке не применяется
     if (input.validity.tooShort) {
       input.setCustomValidity(ERROR_MESSAGES.wrongLength);
+      input.classList.add('search__from-input_not-valid');
       return false;
     } else if (input.value.length > 29) {
       input.setCustomValidity(ERROR_MESSAGES.wrongLength);
+      input.classList.add('search__from-input_not-valid');
       return false;
     }
 
     //Проверка на верность символов в инпутах
     if (!input.validity.valid) {
       input.setCustomValidity(ERROR_MESSAGES.wrongPattern);
+      input.classList.add('search__from-input_not-valid');
       return false;
     }
 
@@ -72,15 +79,9 @@ export class SearchInput {
 
   disableSubmitButton = () => {
     this._submitButton.setAttribute("disabled", "true");
-  }
+  };
 
   activateSubmitButton = () => {
     this._submitButton.removeAttribute("disabled");
-  }
-
-
-  //Метод сброса сообщения ошибки в инпутах
-  // resetInvalidState = () => {
-  //   this._errorElement.textContent = "";
-  // };
+  };
 }

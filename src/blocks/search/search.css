@@ -5,6 +5,7 @@
 @import url(./__from-input/search__from-input.css);
 @import url(./__form-submit/search__form-submit.css);
 @import url(./__error/search__error.css);
+@import url(./__from-input/_not-valid/search__from-input_not-valid.css);
 
 .search {
   background-image: url(../../images/search-background.png);

@@ -1,35 +1,38 @@
 "user strict";
 export class NewsCard {
   constructor(data) {
-    this.data = data;
+    this._data = data;
   }
 
   //Метод собирает карточку по темплейту
   createCard(template) {
     const newCard = template.cloneNode(true);
 
-    newCard.querySelector(".result-card__title").textContent = this.data.title;
-    if (this.data.image === null) {
+    newCard.querySelector(".result-card__title").textContent = this._data.title;
+    if (this._data.image === null) {
       newCard.querySelector(
         ".result-card__image"
-      ).style.backgroundImage = `url(../src/images/Fib.png)`;
+      ).style.backgroundImage = `url(../../images/hippo-logo.png)`;
 
       newCard.querySelector(
         ".result-card__image"
-      ).style.backgroundPosition = `right`;
+      ).style.backgroundPosition = `center`;
+      newCard.querySelector(
+        ".result-card__image"
+      ).style.backgroundSize = `cover`;
     } else
       newCard.querySelector(
         ".result-card__image"
-      ).style.backgroundImage = `url(${this.data.image})`;
+      ).style.backgroundImage = `url(${this._data.image})`;
 
     newCard
       .querySelector(".result-card__link")
-      .setAttribute("href", this.data.url);
-    newCard.querySelector(".result-card__date").textContent = this.data.date;
-    newCard.querySelector(".result-card__text").textContent = this.data.desc;
+      .setAttribute("href", this._data.url);
+    newCard.querySelector(".result-card__date").textContent = this._data.date;
+    newCard.querySelector(".result-card__text").textContent = this._data.desc;
     newCard.querySelector(
       ".result-card__origin"
-    ).textContent = this.data.source;
+    ).textContent = this._data.source;
 
     this.placeCard = newCard;
 

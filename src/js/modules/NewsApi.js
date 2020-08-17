@@ -1,19 +1,19 @@
 "use strict";
 export class NewsApi {
   constructor(options) {
-    this.options = options;
+    this._options = options;
   }
 
   //Метод принимает новости с сервера
-  getNews(request, fromDate, toDate) {
+  getNews(request, fromDate, toDate, sortOption, number, key) {
     return fetch(
-      `${this.options.baseUrl}` +
+      `${this._options.baseUrl}` +
         `q=${request}` +
         `&from=${fromDate}` +
         `&to=${toDate}` +
-        "&sortBy=publishedAt" +
-        "&pageSize=100&" +
-        "apiKey=8aeeba1f3009478aa34ad87aeda059be"
+        `&sortBy=${sortOption}` +
+        `&pageSize=${number}&` +
+        `${key}`
     ).then((res) => {
       if (res.ok) {
         return res.json();

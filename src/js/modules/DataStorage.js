@@ -4,7 +4,7 @@ export class DataStorage {
     this.articles = this.getItem();
 
     //Массив с отформатированными датами
-    this.formatedArticles = this.formatDates();
+    this.formatedArticles = this.formatArtilclesDates();
 
     this.request = localStorage["request"];
   }
@@ -56,44 +56,57 @@ export class DataStorage {
   //Метод получает заголовки, где упоминается запрос инпута
   getNewsTitles = (array) => {
     return array.filter((item) => {
+      if(item.title) {
       const title = item.title.toLowerCase();
 
       return title.indexOf(this.request.toLowerCase()) > -1;
+    }
     });
   };
 
   //Метод получает тексты новостей, где упоминается запрос инпута
   getNewsDesc = (array) => {
+
     return array.filter((item) => {
+      if(item.description)  {
       const desc = item.description.toLowerCase();
 
       return desc.indexOf(this.request.toLowerCase()) > -1;
-    });
-  };
-
-  getNewsDates = (array) => {
-    this.datesArray = [];
-    for (let i = array.length - 1; i >= 0; i--) {
-      this.datesArray.push(array[i].publishedAt);
     }
+    });
 
-    return this.datesArray;
   };
+
+  //Метод получает массив всех упоминаний
+  getMentions = (array) => {
+    return array.filter((item) => {
+      if(item) {
+      const mention = item.toLowerCase();
+
+      return mention.indexOf(this.request.toLowerCase()) > -1;
+    }
+    });
+
+  };
+
 
   //Метод убирает время из даты в массиве
-  formatDates = () => {
+  formatArtilclesDates = () => {
+    if(localStorage['articles']) {
     this.articles.forEach((item) => {
       if (item.publishedAt) {
         item.publishedAt = item.publishedAt.slice(0, -10);
       }
     });
     return this.articles;
+  }
   };
+
   //Метод создаёт отсортированный по дате массив заголовков и описаний
   sortByDate = (date) => {
     this.sortedArray = [];
 
-    this.formatedArticles.map((item) => {
+    this.formatedArticles.forEach((item) => {
       if (item.publishedAt === date) {
         this.sortedArray.push(item.publishedAt);
         this.sortedArray.push(item.title);
@@ -103,14 +116,7 @@ export class DataStorage {
     return this.sortedArray;
   };
 
-  //Метод получает заголовки, где упоминается запрос инпута
-  getMentions = (array) => {
-    return array.filter((item) => {
-      const mention = item.toLowerCase();
 
-      return mention.indexOf(this.request.toLowerCase()) > -1;
-    });
-  };
 
   //Метод очищает хранилище
   clearItems = () => {

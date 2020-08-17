@@ -5,5 +5,18 @@ export const ERROR_MESSAGES = {
   wrongPattern: "Введите верный запрос",
 };
 
+export const NEWS_API_URL =
+  NODE_ENV === "production"
+    ? " https://nomoreparties.co/news/v2/everything?"
+    : "https://newsapi.org/v2/everything?";
 
+export const RENDER_CARDS_STOP = 3; //Количиство карточек, которые рендерятся за один раз
+export const NEWS_API_SORT_BY = "publishedAt"; //Возможные опции: relevancy, popularity, publishedAt.
+export const SEARCH_CARDS_QUANTITY = 100; //Максимальное количество выводимых карточек новостей
+export const NEWS_API_KEY = "apiKey=8aeeba1f3009478aa34ad87aeda059be"; //Ключ авторизации
 
+export const GITHUB_API_DATA = {
+  user: "BakaBokka", //Имя пользователя Гитхаба
+  repo: "Baka-News", //Имя репозитория
+  number: "20", //Количество слайдов
+};

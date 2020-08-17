@@ -5,6 +5,12 @@ import { DataStorage } from "./js/modules/DataStorage";
 import { SearchInput } from "./js/components/SearchInput";
 import { NewsCard } from "./js/components/NewsCard";
 import { NewsCardList } from "./js/components/NewsCardList";
+import {
+  NEWS_API_URL,
+  NEWS_API_SORT_BY,
+  SEARCH_CARDS_QUANTITY,
+  NEWS_API_KEY,
+} from "./js/constants/constants";
 
 //Общие переменные
 const form = document.querySelector(".search__form");
@@ -23,22 +29,19 @@ const resultError = document.querySelector(".result__error");
 const dates = new NewsDate();
 const storage = new DataStorage();
 const searchInput = new SearchInput(form, loadNews);
-const API_URL =
-  NODE_ENV === "production"
-    ? "https://praktikum.tk/news/v2/everything?"
-    : "https://newsapi.org/v2/everything?";
+
 const newsApi = new NewsApi({
-  baseUrl: `${API_URL}`,
+  baseUrl: `${NEWS_API_URL}`,
 });
 
-const newCardList = new NewsCardList(
-  cardContainer,
-  templateCard,
-  createNewCard,
-  dates,
-  storage,
-  resultButton
-);
+const newCardList = new NewsCardList({
+  place: cardContainer,
+  template: templateCard,
+  callback: createNewCard,
+  dateApi: dates,
+  storage: storage,
+  button: resultButton,
+});
 
 //Функция показывает/скрывает прелоадер
 function togglePreloader() {
@@ -71,14 +74,21 @@ function loadNews() {
   searchInput.disableSubmitButton();
 
   newsApi
-    .getNews(input.value, requestFromDate, requestToDate)
+    .getNews(
+      input.value,
+      requestFromDate,
+      requestToDate,
+      NEWS_API_SORT_BY,
+      SEARCH_CARDS_QUANTITY,
+      NEWS_API_KEY
+    )
     .then((result) => {
       storage.setItems(result);
       input.value = localStorage["request"];
     })
 
     .catch((error) => {
-      console.log("Произошла ужасная ошбика:", error);
+      console.log("Произошла ужасная ошибка:", error);
       resultError.classList.remove("result__error_hide");
       hideResultCards();
       storage.clearItems();
@@ -116,31 +126,18 @@ const getRequestFromDate = (date, days) => {
   return new Date(date.setDate(date.getDate() - days));
 };
 
-// Функция получает начальную дату для карточки новостей
-const getFromDate = (date, days) => {
-  return new Date(date.setDate(date.getDate() - days));
-};
-
 //Вызовы функций
-getFromDate(new Date(), 7);
 const requestToDate = dates.renderRequestDate(new Date());
 const requestFromDate = dates.renderRequestDate(
   getRequestFromDate(new Date(), 7)
 );
-
 searchInput.setEventListener();
-
 if (localStorage["totalResults"] && localStorage["totalResults"] !== "0") {
   showResultCards();
   newCardList.render();
-
   showResults();
   if (localStorage["request"]) {
     input.value = localStorage["request"];
     searchInput.activateSubmitButton();
   }
 }
-
-resultButton.addEventListener("click", () => {
-  newCardList.render();
-});

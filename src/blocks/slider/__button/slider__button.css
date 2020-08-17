@@ -5,10 +5,17 @@
   border-radius: 100%;
   margin-right: 6px;
   margin-left: 6px;
+  transition-duration: 1s;
 }
 
 @media (max-width: 769px) {
   .slider__button {
     display: none;
   }
+}
+
+
+.slider__button:hover {
+  transform: scale(1.2) translateY(-62%);
+
 }

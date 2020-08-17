@@ -1,6 +1,5 @@
 "use strict";
 export class NewsDate {
-  constructor() {}
   //Метод получает полное название месяца в подходящем для карточки формате
   _getCardMonth = (date) => {
     switch (date.getMonth()) {
@@ -195,9 +194,22 @@ export class NewsDate {
     return days[day];
   }
 
-//Метод получает полное название месяца для шапки диаграммы
+  //Метод получает полное название месяца для шапки диаграммы
   _getFullMonth(date) {
-    const months = ["январь", "февраль", "март", "апрель", "май", "июнь", "июль", "август", "сентябрь", "октябрь", "ноябрь", "декабрь"];
+    const months = [
+      "январь",
+      "февраль",
+      "март",
+      "апрель",
+      "май",
+      "июнь",
+      "июль",
+      "август",
+      "сентябрь",
+      "октябрь",
+      "ноябрь",
+      "декабрь",
+    ];
     const month = date.getMonth();
 
     return months[month];
@@ -227,7 +239,7 @@ export class NewsDate {
   renderStatsDates = (date) => {
     this.firstDate =
       `${this._getNumDay(date)}` + ", " + `${this._getWeekDay(date)}`;
-      console.log(this.firstDate)
+
     this.statsDates = [this.firstDate];
     for (let i = 1; i <= 6; i++) {
       this.weekDay = new Date(date.setDate(date.getDate() - 1));
@@ -239,26 +251,24 @@ export class NewsDate {
 
       this.statsDates.unshift(this.statsDate);
     }
-    console.log(this.firstDate)
 
     return this.statsDates;
   };
 
-//Медот выдает даты в верном формате для прогресс-баров диаграммы
+  //Медот выдает даты в верном формате для прогресс-баров диаграммы
   renderChartDates = (date) => {
-    this.firstDate = this.renderRequestDate(date)
-    this.chartDates = [this.firstDate]
+    this.firstDate = this.renderRequestDate(date);
+    this.chartDates = [this.firstDate];
     for (let i = 1; i <= 6; i++) {
       this.weekDay = new Date(date.setDate(date.getDate() - 1));
-      this.chartDate = this.renderRequestDate(this.weekDay)
+      this.chartDate = this.renderRequestDate(this.weekDay);
       this.chartDates.unshift(this.chartDate);
     }
-    return this.chartDates
-  }
+    return this.chartDates;
+  };
 
-//Метод выдает название месяца для шапки диаграммы
+  //Метод выдает название месяца для шапки диаграммы
   renderDiagramMonth = (date) => {
     return this._getFullMonth(date);
-  }
-
+  };
 }

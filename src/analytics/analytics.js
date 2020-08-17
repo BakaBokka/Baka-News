@@ -35,7 +35,7 @@ function setCalenderDates(array) {
 //Метод подставляет наименование месяца в шапку диаграммы
 function setDiagramMonth() {
   diagramMonth.textContent =
-    "Дата               " + dates.renderDiagramMonth(new Date());
+    "Дата               " + '(' + dates.renderDiagramMonth(new Date()) + ')';
 }
 
 //Метод расставляет число упоминаний по дням в диаграмму аналитики
@@ -62,11 +62,16 @@ function setChartPercents(array) {
 
 //Вызовы методов
 setRequestData();
+if(storage.articles[0]){
+  const firstNewsDate = storage.articles[0].publishedAt;
 
-const ChartDates = dates.renderChartDates(new Date());
-setCalenderDates(dates.renderStatsDates(new Date()));
+
+const ChartDates = dates.renderChartDates(new Date(firstNewsDate));
+
+setCalenderDates(dates.renderStatsDates(new Date(firstNewsDate)));
 setDiagramMonth();
 
 setChartMentions(stats.getChartMentions(ChartDates));
 
 setChartPercents(stats.getChartPercent(stats.getChartMentions(ChartDates)));
+}

@@ -1,5 +1,5 @@
 # Baka-News
-version: 0.0.18
+version: 0.0.19
 
 ***It's my YaP diploma project***
 

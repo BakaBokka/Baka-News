@@ -1,16 +1,13 @@
-import MARKUP_COMMIT from '../constants/constants'
-"use strict";
+("use strict");
 export class CommitCardList {
   constructor(commits) {
     this._commits = commits;
-
   }
 
   //Метод добавления коммита
   _addCommit = (name, email, date, message, avatar) => {
     const data = { name, email, date, message, avatar };
-    const card = this._commits.callback(data);
-    // this._commits.place.appendChild(card);
+    this._commits.callback(data);
   };
 
   //Метод проходит по массиву и добавляет коммиты в общую обёртку
@@ -19,7 +16,9 @@ export class CommitCardList {
       this._addCommit(
         item.commit.committer.name,
         item.commit.committer.email,
-        this._commits.datesApi.renderCardDate(new Date(item.commit.committer.date)),
+        this._commits.datesApi.renderCardDate(
+          new Date(item.commit.committer.date)
+        ),
         item.commit.message,
         item.author.avatar_url
       );

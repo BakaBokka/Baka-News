@@ -1,13 +1,9 @@
-"use strict"
+"use strict";
 export class GithubApi {
-  constructor (options) {
-
-  }
-
   //Метод принимает новости с сервера
-  getCommits() {
+  getCommits(data) {
     return fetch(
-      `https://api.github.com/repos/BakaBokka/Baka-News/commits`
+      `https://api.github.com/repos/${data.user}/${data.repo}/commits?page=1&per_page=${data.number}`
     ).then((res) => {
       if (res.ok) {
         return res.json();
