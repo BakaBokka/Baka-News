@@ -5,6 +5,8 @@ export const ERROR_MESSAGES = {
   wrongPattern: "Введите верный запрос",
 };
 
+export const DAYS_TO_RENDER = 7;//Количество дней, за которое выводятся новости
+
 export const NEWS_API_URL =
   NODE_ENV === "production"
     ? " https://nomoreparties.co/news/v2/everything?"

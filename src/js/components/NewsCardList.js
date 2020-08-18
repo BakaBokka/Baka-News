@@ -48,7 +48,7 @@ export class NewsCardList {
       .querySelectorAll(".result-card")
       .forEach((e) => e.remove());
     this._start = 0;
-    this._stop = 3;
+    this._stop = RENDER_CARDS_STOP;
   };
 
   _setEventListener = () => {

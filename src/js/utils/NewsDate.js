@@ -236,12 +236,12 @@ export class NewsDate {
   };
 
   //Метод выдает даты в верном формате для диаграммы аналитики
-  renderStatsDates = (date) => {
+  renderStatsDates = (date, days) => {
     this.firstDate =
       `${this._getNumDay(date)}` + ", " + `${this._getWeekDay(date)}`;
 
     this.statsDates = [this.firstDate];
-    for (let i = 1; i <= 6; i++) {
+    for (let i = 1; i <= days-1; i++) {
       this.weekDay = new Date(date.setDate(date.getDate() - 1));
 
       this.statsDate =
@@ -256,10 +256,10 @@ export class NewsDate {
   };
 
   //Медот выдает даты в верном формате для прогресс-баров диаграммы
-  renderChartDates = (date) => {
+  renderChartDates = (date, days) => {
     this.firstDate = this.renderRequestDate(date);
     this.chartDates = [this.firstDate];
-    for (let i = 1; i <= 6; i++) {
+    for (let i = 1; i <= days-1; i++) {
       this.weekDay = new Date(date.setDate(date.getDate() - 1));
       this.chartDate = this.renderRequestDate(this.weekDay);
       this.chartDates.unshift(this.chartDate);

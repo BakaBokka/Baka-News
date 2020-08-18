@@ -10,6 +10,7 @@ import {
   NEWS_API_SORT_BY,
   SEARCH_CARDS_QUANTITY,
   NEWS_API_KEY,
+  DAYS_TO_RENDER
 } from "./js/constants/constants";
 
 //Общие переменные
@@ -129,7 +130,7 @@ const getRequestFromDate = (date, days) => {
 //Вызовы функций
 const requestToDate = dates.renderRequestDate(new Date());
 const requestFromDate = dates.renderRequestDate(
-  getRequestFromDate(new Date(), 7)
+  getRequestFromDate(new Date(), DAYS_TO_RENDER)
 );
 searchInput.setEventListener();
 if (localStorage["totalResults"] && localStorage["totalResults"] !== "0") {

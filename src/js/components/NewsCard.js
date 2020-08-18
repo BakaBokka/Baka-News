@@ -9,10 +9,10 @@ export class NewsCard {
     const newCard = template.cloneNode(true);
 
     newCard.querySelector(".result-card__title").textContent = this._data.title;
-    if (this._data.image === null) {
+    if (this._data.image === "https:" || this._data.image === null) {
       newCard.querySelector(
         ".result-card__image"
-      ).style.backgroundImage = `url(../../images/hippo-logo.png)`;
+      ).style.backgroundImage = `url(images/hippo-logo.png)`;
 
       newCard.querySelector(
         ".result-card__image"

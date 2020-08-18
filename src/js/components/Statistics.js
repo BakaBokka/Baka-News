@@ -8,10 +8,13 @@ export class Statistics {
 
   //Метод получает общее количество упоминаний
   _getTotalMentions = () => {
-    return (
-      this._storage.getNewsTitles(this._articles).length +
-      this._storage.getNewsDesc(this._articles).length
-    );
+    if(localStorage['articles']) {
+      return (
+        this._storage.getNewsTitles(this._articles).length +
+        this._storage.getNewsDesc(this._articles).length
+      );
+    }
+
   };
 
   //Метод получает массив с количеством упоминаний по дням

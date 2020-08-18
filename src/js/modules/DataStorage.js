@@ -55,6 +55,7 @@ export class DataStorage {
 
   //Метод получает заголовки, где упоминается запрос инпута
   getNewsTitles = (array) => {
+    if(localStorage['articles']){
     return array.filter((item) => {
       if(item.title) {
       const title = item.title.toLowerCase();
@@ -62,11 +63,12 @@ export class DataStorage {
       return title.indexOf(this.request.toLowerCase()) > -1;
     }
     });
+  }
   };
 
   //Метод получает тексты новостей, где упоминается запрос инпута
   getNewsDesc = (array) => {
-
+    if(localStorage['articles']){
     return array.filter((item) => {
       if(item.description)  {
       const desc = item.description.toLowerCase();
@@ -74,7 +76,7 @@ export class DataStorage {
       return desc.indexOf(this.request.toLowerCase()) > -1;
     }
     });
-
+  }
   };
 
   //Метод получает массив всех упоминаний
