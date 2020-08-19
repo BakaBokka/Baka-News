@@ -16,6 +16,7 @@
   max-height: 288px;
   min-width: 400px;
   min-height: 288px;
+  transition-duration: 1s;
 
 
 
@@ -41,4 +42,6 @@
 
 .swiper-slide:hover {
   cursor: pointer;
+  transform: translateY(10px);
+  box-shadow: 0px 3px 10px rgba(14, 26, 57, 0.1);
 }

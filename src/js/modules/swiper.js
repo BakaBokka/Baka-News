@@ -1,19 +1,18 @@
-import "swiper/swiper-bundle.css";
-import "./pages/about.css";
 import Swiper, { Navigation, Pagination } from "swiper";
-
+export {swiper};
 // configure Swiper to use modules
 Swiper.use([Navigation, Pagination]);
-import "swiper/swiper-bundle.css";
+
 
 // init Swiper:
 const swiper = new Swiper(".swiper-container", {
   slidesPerView: "auto",
+  init: false,
   spaceBetween: 16,
   slidesPerGroup: 3,
   centeredSlides: true,
   loop: true,
-  loopedSlides: 3,
+  loopedSlides: 5,
   breakpoints: {
     // when window width is >= 480px
     440: {

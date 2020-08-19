@@ -1,3 +1,4 @@
 .diagram__header-desc_two-strings {
   max-width: 90px;
+  white-space: pre-wrap;
 }

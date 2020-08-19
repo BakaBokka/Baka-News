@@ -2,17 +2,15 @@
   display: grid;
   width: 100%;
   gap: 32px;
-  grid-template-columns: repeat(4, minmax(224px, 400px));
+  grid-template-columns: repeat(3, minmax(224px, 400px));
   margin: 55px auto;
   justify-content: center;
+  padding: 0;
+  list-style: none;
 
 }
 
-@media (min-width: 1920px) {
-  .result__cards-container {
-    grid-template-columns: repeat(auto-fill, minmax(224px, 400px));
-  }
-}
+
 
 @media (max-width: 1441px) {
   .result__cards-container {

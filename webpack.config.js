@@ -12,8 +12,8 @@ new webpack.DefinePlugin({
 module.exports = {
   entry: {
     main: "./src/index.js",
-    about: "./src/about.js",
-    analytics: "./src/analytics"
+    about: "./src/about/about.js",
+    analytics: "./src/analytics/analytics.js"
   },
   output: {
     path: path.resolve(__dirname, "dist"),
@@ -45,20 +45,20 @@ module.exports = {
            { loader: MiniCssExtractPlugin.loader,
           options: {
             publicPath: "../",
-            
+
           },
 
         },
-         
+
           {
             loader: "css-loader",
             options: {
               importLoaders: 2,
-              
+
             },
           },
           "postcss-loader",
-          
+
         ],
       },
       {
