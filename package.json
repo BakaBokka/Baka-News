@@ -45,6 +45,6 @@
     "core-js": "3.4.1",
     "optimize-css-assets-webpack-plugin": "5.0.3",
     "react": "16.13.1",
-    "swiper": "6.0.4"
+    "swiper": "6.5.1"
   }
 }
